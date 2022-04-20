@@ -12,7 +12,7 @@ import Button from '../Buttons/buttons';
 const About = () => {
   return (
     <>
-      <Container>
+      <Container id="about">
         <div className="content">
           <figure className="img">
             <Image

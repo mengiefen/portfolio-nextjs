@@ -8,7 +8,7 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 const FrontPage = () => {
   return (
     <Layout>
-      <Container>
+      <Container id="home">
         <SocialMedia />
         <aside className="text-area">
           <h1 className="heading">
@@ -29,7 +29,7 @@ const FrontPage = () => {
             width={1900}
             height={1800}
             alt="picture of me"
-            className="img"           
+            className="img"
           />
         </figure>
       </Container>

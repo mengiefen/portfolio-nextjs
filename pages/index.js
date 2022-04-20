@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import About from '../components/About/about';
+import Contact from '../components/Contact/contact';
 import FrontPage from '../components/FrontPage/front-page';
+import Portfolio from '../components/Portfolio/portfolio';
 import Skills from '../components/Skills/skills';
 
 const Home = () => {
@@ -13,6 +15,8 @@ const Home = () => {
       <FrontPage />
       <About />
       <Skills />
+      <Portfolio />
+      <Contact />
     </main>
   );
 };
