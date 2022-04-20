@@ -17,17 +17,21 @@ const Container = styled.section`
 
   .heading {
     color: ${(props) => props.theme.primary};
-    font-size: min(7vw, 3rem);
+    font-size: min(5vw, 1.5rem);
     text-transform: uppercase;
     line-height: 0;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
   }
 
   .sub-heading {
-    font-size: min(5vw, 1.5rem);
+    font-size: min(5vw, 3.5rem);
+    letter-spacing: 2px;
+    text-align: center;
     color: ${(props) => props.theme.primary};
     text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
   }
 
   .paragraph {
@@ -38,7 +42,7 @@ const Container = styled.section`
 
   figure {
     max-width: 40%;
-    height: 93vh;
+    height:93vh;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -55,7 +59,7 @@ const Container = styled.section`
     width: 100%;
     height: 100%;
     background-color: ${(props) => props.theme.bg};
-    opacity: 0.9;
+    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.4 : 0.9)};
     z-index: 10;
   }
 `;
