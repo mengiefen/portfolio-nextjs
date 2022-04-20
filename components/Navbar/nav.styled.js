@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Nav = styled.nav`
   position: absolute;
-  top: 7vh;
+  top: min(10rem, 10vh);
   right: 0;
   width: 45%;
   height: 93vh;
@@ -11,6 +11,7 @@ const Nav = styled.nav`
   justify-content: center;
   z-index: 11;
   background-color: ${(props) => props.theme.bg};
+  border-top: 1px solid ${(props) => props.theme.secondary};
 
   .menu-list {
     display: flex;

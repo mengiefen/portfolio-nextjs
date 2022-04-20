@@ -6,11 +6,12 @@ html{
   display:block;
   margin: 0 auto;
   padding: 0;
+  background-color: #bbbbbb;
 }
 
 body{
-  height:100vh;
-  width: 100vw;  
+  height:96vh;
+  width: 94vw;  
   margin: 0 auto;
   font-family: 'Bebas Neue', cursive;
   font-family: 'Montserrat', sans-serif;
@@ -18,9 +19,9 @@ body{
 }
 
 .theme-switcher {  
-    position: absolute;  
+    position: fixed;  
     top: 50%;
-    right: 0;
+    right: 2.5vw;
     display: flex;
     justify-content: flex-end;
     border-radius: 50% ; 

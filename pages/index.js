@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import About from '../components/About/about';
 import FrontPage from '../components/FrontPage/front-page';
+import Skills from '../components/Skills/skills';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       </Head>
       <FrontPage />
       <About />
+      <Skills />
     </main>
   );
 };

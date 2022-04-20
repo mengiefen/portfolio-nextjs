@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/logo.png';
-import { HiMenu, HiX} from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 import Header from './header.styled';
 import NavBar from '../Navbar/nav';
 
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <Header>
-      {menuOpen && <NavBar />}
+      {menuOpen && <NavBar handleClick={handleOpenMenu} />}
       <div className="header">
         <Link href="/">
           <a>
