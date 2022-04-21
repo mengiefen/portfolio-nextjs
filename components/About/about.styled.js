@@ -26,14 +26,19 @@ const Container = styled.section`
     color: ${(props) => props.theme.bg};
     line-height: 2;
     flex: 2;
+    align-items: center;
 
-    p {
+    .general-desc {
       text-align: justify;
     }
   }
 
   .title {
     text-transform: uppercase;
+  }
+
+  .btn {
+    max-width: 200px;
   }
 
   .card-list {
@@ -48,9 +53,6 @@ const Container = styled.section`
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 1rem;
-  }
-
-  .btn {
   }
 `;
 export default Container;

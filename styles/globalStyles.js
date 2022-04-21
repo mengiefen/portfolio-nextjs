@@ -30,6 +30,8 @@ body{
     background-color: transparent;    
     border: 2px solid transparent;  
     transition: all 0.3s ease-out;
+    z-index: 1111;
+    cursor: pointer;
   }
 
   .theme-switcher:hover {

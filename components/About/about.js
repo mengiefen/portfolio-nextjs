@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Container from './about.styled';
 import bgImg from '../../public/picture.png';
+
 import communication from '../../public/communication.svg';
 import webdesign from '../../public/webdesign.svg';
 import remotework from '../../public/remotework.svg';
@@ -24,15 +25,20 @@ const About = () => {
             />
           </figure>
           <aside className="desc">
-            <h2 className="title">
-              Hi. I’m Mingstu, nice to meet you. Please take a look around!
-            </h2>
+            <h2 className="title">About Me</h2>
             <p className="general-desc">
-              I’am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?
+              I am a Full-stack Developer who enjoys learning new programming
+              languages and frameworks. I am the kind of person who likes
+              challenging myself and learning from it. I can do full-featured
+              front-end websites using HTML, CSS, JavaScript, and React. I'm
+              also an electrical engineer who loves working on embedded and
+              power electronics & drives.
+            </p>
+
+            <p className="general-desc">
+              I worked also as an engineering instructor in local college for
+              more than 11 years This gives me an opportunity to adapt differnet
+              working enviroment responsibly.
             </p>
             {/* <div className="card-list">
               <div className="card">
@@ -97,7 +103,7 @@ const About = () => {
               </div>
             </div> */}
 
-            <Button type="underline" text="TEST" className="btn" />
+            <Button type="underline" text="See my resume" className="btn" />
           </aside>
         </div>
       </Container>
