@@ -30,7 +30,7 @@ const About = () => {
               I am a Full-stack Developer who enjoys learning new programming
               languages and frameworks. I am the kind of person who likes
               challenging myself and learning from it. I can do full-featured
-              front-end websites using HTML, CSS, JavaScript, and React. I'm
+              front-end websites using HTML, CSS, JavaScript, and React. I&apos;m
               also an electrical engineer who loves working on embedded and
               power electronics & drives.
             </p>
