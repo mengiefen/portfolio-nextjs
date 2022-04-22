@@ -6,9 +6,9 @@ const Btn = styled.button`
   color:${(props) => props.theme.gray};
   min-width: 150px;
   text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 2px;
   align-items: center;
   justify-content: center;
   overflow: hidden;

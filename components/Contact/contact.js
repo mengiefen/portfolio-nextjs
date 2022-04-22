@@ -1,24 +1,42 @@
 import Container, { Button } from './contact.styled';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
     const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
-     
+
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
       (result) => {
-        console.log(result.text);       
+        console.log(result.text);
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
       },
       (error) => {
         console.log(error.text);
       },
     );
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -33,10 +51,24 @@ const Contact = () => {
       <form ref={form} onSubmit={handleSubmit}>
         <ul>
           <li>
-            <input type="text" name="name" placeholder="Your name" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
           </li>
           <li>
-            <input type="email" name="email" placeholder="Valid email" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Valid email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
           </li>
 
           <li>
@@ -45,6 +77,9 @@ const Contact = () => {
               name="message"
               placeholder="Your message here..."
               rows={5}
+              required
+              value={formData.message}
+              onChange={handleChange}
             />
           </li>
         </ul>
