@@ -6,7 +6,8 @@ html{
   display:block;
   margin: 0 auto;
   padding: 0;
-  background-color: #bbbbbb;
+  background-color: #afafaf;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -40,12 +41,12 @@ body{
 
 .light-icon
   {
-    color: #F5F4F0;
+    color: #777;
     font-size: 2rem;
   }  
 
   .dark-icon {
-      color: #2d3142;
+      color: #777;
       font-size: 2rem;
     }  
 `;

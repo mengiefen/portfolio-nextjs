@@ -19,7 +19,7 @@ const Slide = ({ slides, settings }) => {
             height={600}
             alt="desktop"
             className="slide-img"
-          />
+          />         
         </SlideItem>
       ))}
     </Slider>

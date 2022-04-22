@@ -34,6 +34,12 @@ const SlideItem = styled.div`
 
   .slide-img {
     float: right;
+    filter: opacity(0.4);
+    transition: filter 0.5s;
+
+    &:hover {
+      filter:opacity(0.9);
+    }
   }
 `;
 

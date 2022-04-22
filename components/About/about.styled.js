@@ -17,7 +17,8 @@ const Container = styled.section`
   .img {
     flex: 1;
     align-self: center;
-    clip-path: ellipse(35% 50% at 52% 50%);
+    filter: grayscale(0.3);
+    border-radius: 100%  100% 0 100%;
   }
 
   .desc {

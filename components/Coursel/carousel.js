@@ -1,10 +1,9 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 import React, { Component } from 'react';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Container from './coursel.styled';
+import Container from './carousel.styled';
 
 import Desktop from '../../public/coursel/desktop.png';
 import bookStore from '../../public/coursel/book-store.png';
@@ -12,10 +11,9 @@ import covid19 from '../../public/coursel/covid-19.png';
 import covidA from '../../public/coursel/covid-a.png';
 import portfolio from '../../public/coursel/portfolio-mockup.png';
 import portfolio1 from '../../public/coursel/portfolio-mockup1.png';
-import Button from '../Buttons/buttons';
 import Slide from './slide';
 
-export default class Coursel extends Component {
+export default class Carousel extends Component {
   render() {
     const settings = {
       dots: true,

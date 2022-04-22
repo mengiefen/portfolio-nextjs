@@ -8,7 +8,7 @@ import {
   FaAngellist,
   FaMedium,
 } from 'react-icons/fa';
-import react from 'react';
+
 
 const SocialMedia = () => {
   const [hover, setHover] = useState(false);
