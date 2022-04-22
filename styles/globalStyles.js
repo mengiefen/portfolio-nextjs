@@ -52,7 +52,7 @@ body{
 `;
 
 export const darkTheme = {
-  primary: '#fafafa',
+  primary: '#dedede',
   secondary: '#00a6a7',
   tertiary: '#bfc0c0',
   bg: '#2d3142',
