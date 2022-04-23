@@ -22,33 +22,56 @@ body{
 .theme-switcher {  
     position: fixed;  
     top: 50%;
-    right: 2.5vw;
+    right: 0;
     display: flex;
     justify-content: flex-end;
-    border-radius: 50% ; 
-    border: none;    
-    padding: 0.1rem;
-    background-color: transparent;    
-    border: 2px solid transparent;  
+    background-color: transparent;
+    border: none;      
     transition: all 0.3s ease-out;
-    z-index: 1111;
+
     cursor: pointer;
   }
 
-  .theme-switcher:hover {
-    border: 2px solid cyan;
-  }
-
+ 
 .light-icon
   {
-    color: #777;
+    color: #fafafa;
     font-size: 2rem;
   }  
 
   .dark-icon {
-      color: #777;
+      color: #fafafa;
       font-size: 2rem;
     }  
+
+
+.switch {
+  width: 60px;
+  height: 30px;
+  background-color: #2d3142;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 11111;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 40px;
+  height: 40px;
+  background-color:rgba(255, 255, 255, 0.4);;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 `;
 
 export const darkTheme = {
