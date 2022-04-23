@@ -10,22 +10,16 @@ import {
 } from 'react-icons/fa';
 
 const SocialMedia = () => {
-  const [hover, setHover] = useState(false);
   return (
-    <Container
-      onMouseEnter={() => setHover(!hover)}
-      onMouseLeave={() => setHover(!hover)}
-    >
-      {hover && (
-        <div className="icon-list">
-          <FaFacebookSquare className="fa facebook" />
-          <FaTwitterSquare className="fa twitter" />
-          <FaLinkedin className="fa linkedin" />
-          <FaGithubSquare className="fa github" />
-          <FaAngellist className="fa angellist" />
-          <FaMedium className="fa medium" />
-        </div>
-      )}
+    <Container>
+      <div className="icon-list">
+        <FaFacebookSquare className="fa facebook" />
+        <FaTwitterSquare className="fa twitter" />
+        <FaLinkedin className="fa linkedin" />
+        <FaGithubSquare className="fa github" />
+        <FaAngellist className="fa angellist" />
+        <FaMedium className="fa medium" />
+      </div>
     </Container>
   );
 };
@@ -33,28 +27,34 @@ const SocialMedia = () => {
 const Container = styled.div`
   position: absolute;
   top: 50%;
-  left: -2px;
+  left: 0;
   min-height: 10rem;
   min-width: 2rem;
+
   transition: all 1s ease-in-out;
+  background-color: ${({ theme }) => theme.bg};
+  padding: 0.5rem 0;
+  border-radius: 5px;
 
   .icon-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.2rem;
   }
 
   .fa {
     font-size: 1.75rem;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
     color: ${({ theme }) => theme.secondary};
 
     &:hover {
       transform: scale(1.05);
+      color:  ${({ theme }) => theme.primary};
     }
   }
-  
+
   /* .facebook {
     color: #1877f2;
   }

@@ -5,14 +5,15 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: ${(props) => props.theme.bg}; 
+  background-color: ${(props) => props.theme.bg};
 
   .text-area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 70%;
+    max-width: 60%;
     padding: 0 3%;
+    margin-left: 2rem;
   }
 
   .heading {
@@ -23,6 +24,8 @@ const Container = styled.section`
     letter-spacing: 4px;
     font-weight: bold;
     font-family: 'Bebas Neue', cursive;
+    padding: 0;
+    margin: 0;
   }
 
   .sub-heading {
@@ -38,11 +41,12 @@ const Container = styled.section`
     font-weight: 400;
     line-height: 1.5;
     color: ${(props) => props.theme.primary};
+    padding-bottom: 2rem;
   }
 
   figure {
     max-width: 40%;
-    height:93vh;
+    height: 93vh;
     position: relative;
     display: flex;
     align-items: flex-end;

@@ -23,6 +23,7 @@ const StyledFooter = styled.footer`
 
     &:hover {
       transform: scale(1.05);
+      color: ${({ theme }) => theme.bg};
     }
   }
   /* .facebook {

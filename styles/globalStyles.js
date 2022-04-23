@@ -44,7 +44,6 @@ body{
       font-size: 2rem;
     }  
 
-
 .switch {
   width: 60px;
   height: 30px;
@@ -54,8 +53,7 @@ body{
   align-items: center;
   border-radius: 30px;
   padding: 10px;
-  cursor: pointer;
-  z-index: 11111;
+  cursor: pointer; 
 }
 
 .switch[data-isOn="true"] {
