@@ -40,7 +40,12 @@ const Contact = () => {
   };
 
   return (
-    <Container id="contact">
+    <Container
+      id="contact"
+      initial={{ width: 0, opacity: 0.5 }}
+      whileInView={{ width: '90%', opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div className="welcome">
         <h2>Contact me</h2>
         <p>
@@ -83,7 +88,16 @@ const Contact = () => {
             />
           </li>
         </ul>
-        <Button className="form-btn" type="submit">
+        <Button
+          className="form-btn"
+          type="submit"
+          whileHover={{
+            scale: 1.05,
+            backgroundColor: '#fafafa',
+            color: '#2d3142',
+          }}
+          whileTap={{ scale: 0.95 }}
+        >
           Send message
         </Button>
       </form>

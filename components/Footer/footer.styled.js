@@ -19,12 +19,13 @@ const StyledFooter = styled.footer`
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
+    color: ${({ theme }) => theme.secondary};
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
-  .facebook {
+  /* .facebook {
     color: #1877f2;
   }
 
@@ -42,7 +43,7 @@ const StyledFooter = styled.footer`
   }
   .medium {
     color: #000;
-  }
+  } */
 `;
 
 export default StyledFooter;

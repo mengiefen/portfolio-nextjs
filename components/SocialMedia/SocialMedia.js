@@ -9,7 +9,6 @@ import {
   FaMedium,
 } from 'react-icons/fa';
 
-
 const SocialMedia = () => {
   const [hover, setHover] = useState(false);
   return (
@@ -49,12 +48,14 @@ const Container = styled.div`
     font-size: 1.75rem;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
+    color: ${({ theme }) => theme.secondary};
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
-  .facebook {
+  
+  /* .facebook {
     color: #1877f2;
   }
 
@@ -72,7 +73,7 @@ const Container = styled.div`
   }
   .medium {
     color: #000;
-  }
+  } */
 `;
 
 export default SocialMedia;

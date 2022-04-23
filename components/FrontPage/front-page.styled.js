@@ -4,8 +4,8 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 93vh;
-  background-color: ${(props) => props.theme.bg};
+  height: 100vh;
+  background-color: ${(props) => props.theme.bg}; 
 
   .text-area {
     display: flex;

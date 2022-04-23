@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   width: 90%;
   height: 100vh;
   background-color: ${(props) => props.theme.bg};
@@ -76,7 +77,7 @@ const Container = styled.section`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   background-color: ${(props) => props.theme.secondary};
   border: 2px solid ${(props) => props.theme.secondary};
   color: ${(props) => props.theme.primary};
@@ -88,10 +89,6 @@ export const Button = styled.button`
   padding: 1rem;
   cursor: pointer;
   transition: transform 0.3s ease-out;
-
-  &:hover {
-    transform: scale(0.98);
-  }
 `;
 
 export default Container;

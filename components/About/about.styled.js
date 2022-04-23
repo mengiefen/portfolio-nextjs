@@ -18,7 +18,7 @@ const Container = styled.section`
     flex: 1;
     align-self: center;
     filter: grayscale(0.3);
-    border-radius: 100%  100% 0 100%;
+    border-radius: 100% 100% 0 100%;
   }
 
   .desc {

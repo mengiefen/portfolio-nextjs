@@ -1,11 +1,11 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   position: absolute;
   top: min(10rem, 10vh);
   right: 0;
   width: 45%;
-  height: 93vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,10 +25,9 @@ const Nav = styled.nav`
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-   
 
     a {
-      text-decoration: none;      
+      text-decoration: none;
       padding-bottom: 0.3rem;
       color: ${(props) => props.theme.primary};
       transition: all 0.5s ease-in-out;
