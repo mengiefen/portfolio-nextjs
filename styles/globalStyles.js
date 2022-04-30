@@ -54,6 +54,8 @@ body{
   border-radius: 30px;
   padding: 10px;
   cursor: pointer; 
+  border: 2px solid #fafafa;
+  z-index: 22222;
 }
 
 .switch[data-isOn="true"] {
