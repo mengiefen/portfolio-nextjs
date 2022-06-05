@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.bg};
+  color: ${({ theme }) => theme.primary};
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
+  border-top: 0.5px solid ${(props) => props.theme.tertiary};
 
   .icon-list {
     display: flex;
@@ -19,11 +20,11 @@ const StyledFooter = styled.footer`
     border-radius: 50%;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.gray};
 
     &:hover {
       transform: scale(1.05);
-      color: ${({ theme }) => theme.bg};
+      color: ${({ theme }) => theme.primary};
     }
   }
   /* .facebook {

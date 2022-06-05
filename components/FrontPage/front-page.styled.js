@@ -64,7 +64,7 @@ const Container = styled.section`
     width: 100%;
     height: 100%;
     background-color: ${(props) => props.theme.bg};
-    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.4 : 0.9)};
+    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.3 : 0.9)};
     z-index: 10;
   }
 `;

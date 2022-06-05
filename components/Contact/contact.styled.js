@@ -78,9 +78,9 @@ const Container = styled(motion.section)`
 `;
 
 export const Button = styled(motion.button)`
-  background-color: ${(props) => props.theme.secondary};
-  border: 2px solid ${(props) => props.theme.secondary};
-  color: ${(props) => props.theme.primary};
+  background-color: ${(props) => props.theme.primary};
+  border: 2px solid ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.bg};
   min-width: 150px;
   text-transform: uppercase;
   font-size: 1rem;

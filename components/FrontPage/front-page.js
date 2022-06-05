@@ -14,7 +14,7 @@ const FrontPage = () => {
           <h1 className="heading">
             Hello, <span>I&apos;m Mengstu</span>
           </h1>
-          <h2 className="sub-heading">Full-stack Developer</h2>
+          <h2 className="sub-heading">I&apos;m Full-stack Developer</h2>
           <p className="paragraph">
             I can help you build a product , feature or website. Look through
             some of my work and experience! If you like what you see and have a

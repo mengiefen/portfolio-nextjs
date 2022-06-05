@@ -7,7 +7,7 @@ const Header = styled.header`
   height: min(10rem, 10vh);
   width: 100%;
   background-color: ${(props) => props.theme.bg};
-  border-bottom: 0.5px solid ${(props) => props.theme.secondary};
+  border-bottom: 0.5px solid ${(props) => props.theme.tertiary};
   display: flex;
   flex-direction: column;
   justify-content: center;

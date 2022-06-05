@@ -5,8 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <section>{children}</section>
-      <StyledFooter />
+      <section>{children}</section>  
     </>
   );
 };

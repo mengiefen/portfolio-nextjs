@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const Btn = styled.button`
   background-color:  ${(props) => props.theme.tertiary};
-  border: 2px solid ${(props) => props.theme.secondary};
-  color:${(props) => props.theme.gray};
+  border: 2px solid ${(props) => props.theme.tertiary};
+  color:${(props) => props.theme.primary};
   min-width: 150px;
   text-transform: uppercase;
   font-size: 0.9rem;

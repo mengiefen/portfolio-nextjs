@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -19,34 +19,56 @@ body{
   position: relative;
 }
 
+.scroll-to-home {
+  position: fixed;
+  cursor: pointer;
+  bottom: 1rem;
+  right: 3%;
+  border-radius: 50%;
+  padding: 0.75rem;
+  z-index: 11111;
+  border: none;
+  background-color:#ED254EFF;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: scale 0.5s ease-in-out;
+
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
 .theme-switcher {  
     position: fixed;  
     top: 50%;
-    right: 0;
+    right: -5px;
     display: flex;
     justify-content: flex-end;
     background-color: transparent;
     border: none;      
     transition: all 0.3s ease-out;
-
     cursor: pointer;
+    z-index: 11111;
   }
 
  
 .light-icon
   {
     color: #fafafa;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }  
 
   .dark-icon {
       color: #fafafa;
-      font-size: 2rem;
-    }  
+      font-size: 1.5rem;
+  }  
 
 .switch {
-  width: 60px;
-  height: 30px;
+  width: 45px;
+  height: 15px;
   background-color: #2d3142;
   display: flex;
   justify-content: flex-start;
@@ -63,29 +85,53 @@ body{
 }
 
 .handle {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color:rgba(255, 255, 255, 0.4);;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 `;
 
+// export const darkTheme = {
+//   primary: "#dedede",
+//   secondary: "#00a6a7",
+//   tertiary: "#bfc0c0",
+//   bg: "#2d3142",
+// };
+
 export const darkTheme = {
-  primary: '#dedede',
-  secondary: '#00a6a7',
-  tertiary: '#bfc0c0',
-  bg: '#2d3142',
+  primary: "#F4FFFDFF",
+  secondary: "#F9DC5CFF", 
+  tertiary: "#ED254EFF",
+  bg: "#011936FF",
+  gray: "#777",
 };
 
+//
+
+// export const darkTheme = {
+//   primary: "#F7F4E9",
+//   secondary: "#3CBCC3",
+//   tertiary: "#bfc0c0",
+//   bg: "#1D1D2C",
+// };
+
+// export const darkTheme = {
+//   primary: "#DEB992",
+//   secondary: "#1BA098",
+//   tertiary: "#bfc0c0",
+//   bg: "#051622",
+// };
+
 export const lightTheme = {
-  primary: '#2d3142',
-  secondary: '#006d65',
-  tertiary: '#bfc0c0',
-  bg: '#fafafa',
+  primary: "#2d3142",
+  secondary: "#1BA098",
+  tertiary: "#bfc0c0",
+  bg: "#fafafa",
+  gray: "#bfc0c0",
 };
 
 export default GlobalStyle;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.section`
   width: 100%;
@@ -9,17 +9,21 @@ const Container = styled.section`
   justify-content: center;
 
   .skill-list {
+    padding: 5% 2%;
     width: 70%;
     height: 70%;
-    background-color: ${({ theme }) => theme.primary};
+    background-color: ${({ theme }) => theme.bg};
     color: ${(props) => props.theme.bg};
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
     position: relative;
+    box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray}; 
 
     .skill-title {
       width: 40%;
-      height: 15%;
-      background-color: ${(props) => props.theme.tertiary};
+      height: 12%;
+      background-color: ${(props) => props.theme.gray};
       color: ${(props) => props.theme.bg};
       position: absolute;
       top: -5%;
@@ -27,11 +31,10 @@ const Container = styled.section`
       transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
-      text-align: center;
-      padding: 1rem 3rem;
-      border-radius: 10px;
-      box-shadow: 2px 2px 10px ${(props) => props.theme.bg},
-        2px 2px 10px ${(props) => props.theme.bg};
+      justify-content: center;
+      padding: 0 3rem;
+      border-radius: 40px;
+      box-shadow: 0 4px 8px 0 ${(props) => props.theme.gray}; 
     }
   }
 
@@ -41,8 +44,20 @@ const Container = styled.section`
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 100%;
     width: 100%;
+  }
+
+  .icon-holder {
+    border-radius: 30%;
+    padding: 0.75rem;
+    overflow: hidden;
+    transition: all 0.5s;
+    box-shadow: 0 2px 8px 0 ${(props) => props.theme.gray};  
+
+    :hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};  
+    }
   }
 `;
 

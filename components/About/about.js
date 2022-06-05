@@ -36,7 +36,7 @@ const About = () => {
 
           <p className="general-desc">
             I worked also as an engineering instructor in local college for more
-            than 11 years This gives me an opportunity to adapt differnet
+            than 11 years This experiance coupled with my skill in programming gave me an opportunity to adapt differnet
             working enviroment responsibly.
           </p>
           {/* <div className="card-list">

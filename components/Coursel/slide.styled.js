@@ -1,17 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SlideItem = styled.div`
-  height: 100vh;
   display: flex;
-  align-items: center;
   position: relative;
 
   .slider-detail {
     width: 40%;
     height: auto;
     border-radius: 3rem 0 3rem 0;
-    color: ${({ theme }) => theme.primary};
-    background-color: ${(props) => props.theme.bg};
+    color: ${({ theme }) => theme.bg};
+    background-color: ${(props) => props.theme.primary};
     padding: 2rem;
     position: absolute;
     top: 0%;
@@ -34,11 +32,11 @@ const SlideItem = styled.div`
 
   .slide-img {
     float: right;
-    filter: opacity(0.4);
+    filter: opacity(0.6);
     transition: filter 0.5s;
 
     &:hover {
-      filter:opacity(0.9);
+      filter: opacity(0.9);
     }
   }
 `;

@@ -1,13 +1,13 @@
-import Container, { Button } from './contact.styled';
-import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import Container, { Button } from "./contact.styled";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e) => {
@@ -21,14 +21,14 @@ const Contact = () => {
       (result) => {
         console.log(result.text);
         setFormData({
-          name: '',
-          email: '',
-          message: '',
+          name: "",
+          email: "",
+          message: "",
         });
       },
       (error) => {
         console.log(error.text);
-      },
+      }
     );
   };
 
@@ -42,8 +42,8 @@ const Contact = () => {
   return (
     <Container
       id="contact"
-      initial={{ width: 0, opacity: 0.5 }}
-      whileInView={{ width: '90%', opacity: 1 }}
+      initial={{ width: "90%", opacity: 0.9 }}
+      whileInView={{ width: "90%", opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <div className="welcome">
@@ -88,16 +88,7 @@ const Contact = () => {
             />
           </li>
         </ul>
-        <Button
-          className="form-btn"
-          type="submit"
-          whileHover={{
-            scale: 1.05,
-            backgroundColor: '#fafafa',
-            color: '#2d3142',
-          }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <Button className="form-btn" type="submit" whileTap={{ scale: 0.95 }}>
           Send message
         </Button>
       </form>

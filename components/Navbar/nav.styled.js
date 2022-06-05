@@ -11,7 +11,7 @@ const Nav = styled(motion.nav)`
   justify-content: center;
   z-index: 11;
   background-color: ${(props) => props.theme.bg};
-  border-top: 1px solid ${(props) => props.theme.secondary};
+  border-top: 1px solid ${(props) => props.theme.tertiary};
 
   .menu-list {
     display: flex;
