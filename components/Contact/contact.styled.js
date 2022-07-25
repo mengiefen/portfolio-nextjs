@@ -43,6 +43,7 @@ const Container = styled(motion.section)`
   input {
     padding: 1rem 0.5rem;
     font-size: 1rem;
+    border-radius: 5px;
     outline: 2px solid transparent;
     border: none;
     width: 100%;
@@ -53,8 +54,8 @@ const Container = styled(motion.section)`
 
     &:hover,
     &:focus {
-      border: 0.5px solid transparent;
-      outline: 2px solid ${({ theme }) => theme.secondary};
+      border: 0.5px solid ${({ theme }) => theme.green};
+      box-shadow: 0 0 5px ${({ theme }) => theme.green};
     }
   }
 
@@ -71,16 +72,16 @@ const Container = styled(motion.section)`
 
     &:hover,
     &:focus {
-      border: 0.5px solid transparent;
-      outline: 2px solid ${({ theme }) => theme.secondary};
+      border: 0.5px solid ${({ theme }) => theme.green};
+      box-shadow: 0 0 5px ${({ theme }) => theme.green};
     }
   }
 `;
 
 export const Button = styled(motion.button)`
-  background-color: ${(props) => props.theme.primary};
-  border: 2px solid ${(props) => props.theme.primary};
-  color: ${(props) => props.theme.bg};
+  background-color: ${(props) => props.theme.tertiary};
+  border: 2px solid ${(props) => props.theme.tertiary};
+  color: ${(props) => props.theme.primary};
   min-width: 150px;
   text-transform: uppercase;
   font-size: 1rem;
@@ -88,7 +89,14 @@ export const Button = styled(motion.button)`
   letter-spacing: 1.5px;
   padding: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    transform: scale(0.999);
+    opacity: 0.8;
+    background-color: ${({ theme }) => theme.bg};
+    color: ${({ theme }) => theme.tertiary};
+  }
 `;
 
 export default Container;

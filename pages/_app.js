@@ -41,13 +41,13 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={dark ? darkTheme : lightTheme}>
         <button type="button" onClick={toggleTheme} className="theme-switcher">
           {dark ? (
-            <div className="switch" data-isOn={dark} onClick={toggleTheme}>
+            <div className="switch" data-ison={dark} onClick={toggleTheme}>
               <motion.div className="handle" layout transition={spring}>
                 <MdOutlineLightMode className="light-icon" />
               </motion.div>
             </div>
           ) : (
-            <div className="switch" data-isOn={dark} onClick={toggleTheme}>
+            <div className="switch" data-ison={dark} onClick={toggleTheme}>
               <motion.div className="handle" layout transition={spring}>
                 <MdOutlineDarkMode className="dark-icon" />
               </motion.div>

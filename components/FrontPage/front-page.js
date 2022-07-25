@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Button from '../Buttons/buttons';
+import { ButtonOutline } from '../Buttons/buttons.styled';
 import Layout from '../Layout/layout';
 import Container from './front-page.styled';
 import bgImg from '../../public/picture.png';
@@ -20,7 +20,7 @@ const FrontPage = () => {
             some of my work and experience! If you like what you see and have a
             project you need coded, don’t hestiate to contact me.
           </p>
-          <Button text="Contact me" />
+          <ButtonOutline href="#contact"> Contact me </ButtonOutline>
         </aside>
         <figure>
           <span className="overlay"></span>

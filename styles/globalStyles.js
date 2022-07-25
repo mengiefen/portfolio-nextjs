@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -34,7 +34,7 @@ body{
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  transition: scale 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   :hover {
     transform: scale(1.05);
@@ -44,7 +44,7 @@ body{
 .theme-switcher {  
     position: fixed;  
     top: 50%;
-    right: -5px;
+    right: -7.5px;
     display: flex;
     justify-content: flex-end;
     background-color: transparent;
@@ -80,7 +80,7 @@ body{
   z-index: 22222;
 }
 
-.switch[data-isOn="true"] {
+.switch[data-ison="true"] {
   justify-content: flex-end;
 }
 
@@ -103,11 +103,14 @@ body{
 // };
 
 export const darkTheme = {
-  primary: "#F4FFFDFF",
-  secondary: "#F9DC5CFF", 
-  tertiary: "#ED254EFF",
-  bg: "#011936FF",
-  gray: "#777",
+  primary: '#F4FFFDFF',
+  secondary: '#F9DC5CFF',
+  tertiary: '#ED254EFF',
+  bg: '#011936FF',
+  gray: '#777',
+  green: '#1FB57B',
+  yellow: '#FAD9A1',
+  red: '#F37878',
 };
 
 //
@@ -127,11 +130,14 @@ export const darkTheme = {
 // };
 
 export const lightTheme = {
-  primary: "#2d3142",
-  secondary: "#1BA098",
-  tertiary: "#bfc0c0",
-  bg: "#fafafa",
-  gray: "#bfc0c0",
+  primary: '#2d3142',
+  secondary: '#F36B6B',
+  tertiary: '#5DAE8B',
+  bg: '#fafafa',
+  gray: '#bfc0c0',
+  green: '#1FB57B',
+  yellow: '#FAD9A1',
+  red: '#F37878',
 };
 
 export default GlobalStyle;

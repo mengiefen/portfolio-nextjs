@@ -1,21 +1,23 @@
 import styled from 'styled-components';
 
-const Btn = styled.button`
-  background-color:  ${(props) => props.theme.tertiary};
+const Btn = styled.a`
+  background-color: ${(props) => props.theme.tertiary};
   border: 2px solid ${(props) => props.theme.tertiary};
-  color:${(props) => props.theme.primary};
+  color: ${(props) => props.theme.primary};
   min-width: 150px;
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0.8rem;
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease-out;
+  text-decoration: none;
+  text-align: center;
 
   .slide {
     width: 100%;
@@ -42,7 +44,7 @@ const Btn = styled.button`
 
   .underline {
     width: 100%;
-    height: 2.5px;
+    height: 1px;
     margin-top: 15px;
     align-self: flex-end;
     left: -200px;
@@ -53,9 +55,29 @@ const Btn = styled.button`
   }
 
   &:hover .underline {
-    border: 1px solid  ${(props) => props.theme.secondary};
+    border: 1px solid ${(props) => props.theme.secondary};
     left: 0;
     background-color: ${(props) => props.theme.secondary};
+  }
+`;
+
+export const ButtonOutline = styled.a`
+  border: 2px solid ${(props) => props.theme.tertiary};
+  color: ${(props) => props.theme.tertiary};
+  background-color: ${(props) => props.theme.bg};
+  min-width: 150px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  padding: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: ${(props) => props.theme.tertiary};
+    color: ${({ theme }) => theme.primary};
   }
 `;
 

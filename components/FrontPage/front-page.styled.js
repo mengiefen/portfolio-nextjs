@@ -49,9 +49,9 @@ const Container = styled.section`
     height: 93vh;
     position: relative;
     display: flex;
-    align-items: flex-end;    
+    align-items: flex-end;
   }
-  
+
   .img {
     clip-path: polygon(50% 100%, 100% 38%, 75% 0, 25% 0, 0% 38%);
   }

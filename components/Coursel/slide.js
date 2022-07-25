@@ -8,11 +8,11 @@ const Slide = ({ sliderRef, slides, settings }) => {
     <Slider ref={sliderRef} {...settings}>
       {slides.map((slide) => (
         <SlideItem key={slide.id}>
-          {/* <div className="slider-detail">
+          <div className="slider-detail">
             <h2 className="title">{slide.title}</h2>
             <p className="desc">{slide.desc}</p>
-            <Button text="See project" />
-          </div> */}
+            {/* <Button text="See project" /> */}
+          </div>
           <Image
             src={slide.img}
             width={900}

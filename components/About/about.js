@@ -36,8 +36,9 @@ const About = () => {
 
           <p className="general-desc">
             I worked also as an engineering instructor in local college for more
-            than 11 years This experiance coupled with my skill in programming gave me an opportunity to adapt differnet
-            working enviroment responsibly.
+            than 11 years This experiance coupled with my skill in programming
+            gave me an opportunity to adapt differnet working enviroment
+            responsibly.
           </p>
           {/* <div className="card-list">
               <div className="card">
@@ -102,11 +103,16 @@ const About = () => {
               </div>
             </div> */}
 
-          <Button type="underline" text="See my resume" className="btn" />
+          <Button
+            type="underline"
+            text="See my resume"
+            className="btn"
+            target="_blank"
+            link="https://docs.google.com/document/d/1BfcktXwmWIs0BJsUC0Kqtg6KXQvXh23I_-bxO9DQ7Lg/edit?usp=sharing"
+          />
         </aside>
       </div>
     </Container>
   );
 };
-
 export default About;
