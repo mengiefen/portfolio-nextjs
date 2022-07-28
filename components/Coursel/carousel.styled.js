@@ -1,50 +1,56 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.section`
-  padding-top: 20%;
-  width: 90%;
-  height: 100%;
-  padding: 5%;
-  background-color: ${({ theme }) => theme.bg};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: ${(props) => props.theme.primary};
+  background-color: ${({ theme }) => theme.bg};
 
-  .carousel-container {
-    width: 100%;
-    position: relative;
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-left: 6%;
+    padding-bottom: 0.5rem;
   }
 
-  .button-left {
+  .border-bottom {
+    width: 40%;
+    padding-top: 1rem;
+    border-bottom: 4px solid ${({ theme }) => theme.tertiary};
+    margin-left: auto;
+  }
+
+  .arrow-left,
+  .arrow-right {
     position: absolute;
-    cursor: pointer;
     top: 50%;
-    left: -2.5%;
+    transform: translateY(-50%);
+    cursor: pointer;
     border-radius: 50%;
+    padding: 0.75rem;
+    z-index: 111;
     border: none;
-    padding: 0.5rem 0.6rem;
-    background-color: ${({ theme }) => theme.secondary};
+    background-color: #ed254eff;
     color: #fafafa;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .button-right {
-    position: absolute;
-    cursor: pointer;
-    border: none;
-    background-color: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.bg};
-    top: 50%;
-    right: -2.5%;
-    border-radius: 50%;
-    padding: 0.5rem 0.6rem;
-    background-color: ${({ theme }) => theme.secondary};
-    color: #fafafa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .arrow-left {
+    left: 2rem;
+  }
+
+  .arrow-right {
+    right: 2rem;
   }
 `;
 

@@ -1,53 +1,39 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const SlideItem = styled.div`
+const Container = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 472px;
   position: relative;
-  cursor: pointer;
-  overflow: hidden;
 
-
-  .slider-detail {  
+  .arrow-left,
+  .arrow-right {
     position: absolute;
-    top: -100%;
-    left: 0;
-    width: 80%;
-    height: 100%; 
-    color: ${({ theme }) => theme.bg};
-    background-color: ${(props) => props.theme.primary};
-    padding: 1rem;
-    position: absolute;
-    top: 0%;
-    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.75rem;
     z-index: 111;
-    text-align: center;
-    opacity: 0.9;
-    border-radius : 20px;
-  }
-
-  .title {
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-  }
-
-  .desc {
-    line-height: 1.5;
+    border: none;
+    background-color: #ed254eff;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1rem;
-    font-weight: 400;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .slide-img {
-    float: right;
-    filter: opacity(0.8);
-    transition: all 0.5s;
+  .arrow-left {
+    left: 2rem;
+  }
 
-    &:hover {
-      filter: opacity(0.9);
-      transform: scale(1.1);
-    }
+  .arrow-right {
+    right: 2rem;
   }
 `;
 
-export default SlideItem;
+export default Container;

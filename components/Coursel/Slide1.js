@@ -5,14 +5,6 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import slideData from '../../data/carousel';
 
 const Slides = () => {
-  // const slides = useRef(
-  //   slideData
-  //       .filter(
-  //         (slide, index) =>
-  //           index >= slideDetail.start && index <= slideDetail.end,
-  //       )
-  // );
-
   const [slideDetail, setSlideDetail] = useState({
     start: 0,
     end: 0,
@@ -52,6 +44,15 @@ const Slides = () => {
         start: slideDetail.start - 2,
         end: slideDetail.end - 2,
       });
+
+      if (
+        slideDetail.start < slideDetail.total &&
+        slideDetail.end > slideDetail.total
+      ) {
+      }
+
+      if (slideDetail.start > slideDetail.total) {
+      }
     }
 
     if (slideDetail.start === 0) {

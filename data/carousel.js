@@ -35,28 +35,28 @@ const slideData = [
     id: 5,
     img: covid19,
     title: 'Slide 5',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data. The user can search by country and be able to see updated covid information. Therefore, the app has the following features: Categorizes the countries in the continent for easy access. Access the list of countries data.       Select a single country and access the countrys detailed daily update.',
+    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
   },
 
   {
     id: 6,
     img: covid19,
     title: 'Slide 6',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data. The user can search by country and be able to see updated covid information. Therefore, the app has the following features: Categorizes the countries in the continent for easy access. Access the list of countries data.       Select a single country and access the countrys detailed daily update.',
+    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
   },
 
   {
     id: 7,
     img: covid19,
     title: 'Slide 7',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data. The user can search by country and be able to see updated covid information. Therefore, the app has the following features: Categorizes the countries in the continent for easy access. Access the list of countries data.       Select a single country and access the countrys detailed daily update.',
+    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
   },
 
   {
     id: 8,
     img: covid19,
     title: 'Slide 8',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data. The user can search by country and be able to see updated covid information. Therefore, the app has the following features: Categorizes the countries in the continent for easy access. Access the list of countries data.       Select a single country and access the countrys detailed daily update.',
+    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
   },
 ];
 

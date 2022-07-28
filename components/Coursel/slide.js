@@ -1,28 +1,34 @@
-import Image from "next/image";
-import Button from "../Buttons/buttons";
-import Slider from "react-slick";
-import SlideItem from "./slide.styled";
+import Slider from 'react-slick';
+import SlideItem from './SlideItem';
+import Container from './slide.styled';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Slide = ({ sliderRef, slides, settings }) => {
   return (
-    <Slider ref={sliderRef} {...settings}>
-      {slides.map((slide) => (
-        <SlideItem key={slide.id}>
-          <div className="slider-detail">
-            <h2 className="title">{slide.title}</h2>
-            <p className="desc">{slide.desc}</p>
-            {/* <Button text="See project" /> */}
-          </div>
-          <Image
-            src={slide.img}
-            width={900}
-            height={600}
-            alt="desktop"
-            className="slide-img"
-          />
-        </SlideItem>
-      ))}
-    </Slider>
+    <Container>
+      <button
+        type="button"
+        className="arrow-left"
+        id="left"
+        onClick={sliderRef?.slickPrev}
+      >
+        <FaChevronLeft />
+      </button>
+      <Slider ref={sliderRef} {...settings}>
+        {slides.map((slide, index) => (
+          <SlideItem key={slide.id} slide={slide} />
+        ))}
+      </Slider>
+
+      <button
+        type="button"
+        className="arrow-right"
+        id="right"
+        onClick={sliderRef?.slickNext}
+      >
+        <FaChevronRight />
+      </button>
+    </Container>
   );
 };
 
