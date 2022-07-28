@@ -13,10 +13,13 @@ const Container = styled.div`
   box-shadow: 0 0 5px ${({ theme }) => theme.gray};
   border-radius: 10px;
   padding: 1rem 0;
-  transition: all 0.65s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  /* Media Query to vary the size of the slide item */
 
   &:hover {
     box-shadow: 0 0 10px ${({ theme }) => theme.tertiary};
+    transform: translateY(-3px);
   }
 
   .slide-info {

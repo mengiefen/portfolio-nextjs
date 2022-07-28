@@ -1,17 +1,17 @@
 import React from 'react';
-import Container from './Carousel1.styled';
-import Slide from './Slide1';
+import Container from './Carousel.styled';
+import Slider from './Slider';
 
-const Carousel1 = () => {
+const Carousel = () => {
   return (
     <Container>
       <h2>
         My Projects
         <div className="border-bottom"></div>
       </h2>
-      <Slide />
+      <Slider />
     </Container>
   );
 };
 
-export default Carousel1;
+export default Carousel;
