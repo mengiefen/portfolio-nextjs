@@ -9,6 +9,7 @@ import workflows from '../../public/workflows.svg';
 import test from '../../public/test.svg';
 
 import Button from '../Buttons/buttons';
+import { FaChevronRight } from 'react-icons/fa';
 
 const About = () => {
   return (
