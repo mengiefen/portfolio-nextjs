@@ -11,7 +11,7 @@ const SlideItem = ({ slide }) => {
       <div className="image-holder">
         <Image
           src={slide.img}
-          width={900}
+          width={920}
           height={600}
           alt="desktop"
           className="slide-img move-down"
@@ -44,6 +44,7 @@ const SlideItem = ({ slide }) => {
           </Link>
         </div>
       </div>
+      <div className="border-decor"></div>
     </Container>
   );
 };

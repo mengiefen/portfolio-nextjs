@@ -5,7 +5,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   height: 450px;
-  width: 27.5%;
+  width: 90%;
+  max-width: 350px;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -14,6 +15,20 @@ const Container = styled.div`
   border-radius: 10px;
   padding: 1rem 0;
   transition: all 0.3s ease-in-out;
+
+  .border-decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: ${({ theme }) => theme.tertiary};
+    background: linear-gradient(
+      to right,
+      ${({ theme }) => theme.tertiary} 0%,
+      ${({ theme }) => theme.secondary} 100%
+    );
+  }
 
   /* Media Query to vary the size of the slide item */
 

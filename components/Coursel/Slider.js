@@ -1,101 +1,70 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Container from './Slider.styled';
 import SlideItem from './SlideItem';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import slideData from '../../data/carousel';
-
 import { getWidth, rotateBack, rotateForward } from './slide';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// import './styles.css';
+
+// import required modules
+import { Keyboard, Scrollbar, Navigation, Pagination, Autoplay } from 'swiper';
+
 const Slider = () => {
-  const [width, setWidth] = useState(getWidth());
-  const [slideDetail, setSlideDetail] = useState({
-    start: 0,
-    end: null,
-    slides: [],
-    slideWidth: null,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(getWidth());
-      setSlideDetail({
-        ...slideDetail,
-        end: width - 1,
-        slideWidth: width,
-      });
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const windowWidth =
-      window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1;
-    setSlideDetail({
-      start: 0,
-      end: windowWidth - 1,
-      slides: slideData.slice(0, windowWidth),
-      slideWidth: windowWidth,
-    });
-  }, []);
-
-  const handleClickRight = () => {
-    setSlideDetail({
-      ...slideDetail,
-      ...rotateForward(
-        slideData,
-        slideDetail.start,
-        slideDetail.end,
-        slideDetail.slideWidth,
-      ),
-    });
-  };
-
-  const handleClickLeft = () => {
-    setSlideDetail({
-      ...slideDetail,
-      ...rotateBack(
-        slideData,
-        slideDetail.start,
-        slideDetail.end,
-        slideDetail.slideWidth,
-      ),
-    });
-  };
-
   return (
     <Container>
-      <button
-        type="button"
-        className="arrow-left"
-        id="left"
-        onClick={handleClickLeft}
+      <Swiper
+        slidesPerView={3}
+        centeredSlides={false}
+        slidesPerGroupSkip={1}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        grabCursor={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        keyboard={{
+          enabled: true,
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+          769: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+
+          480: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+        }}
+        scrollbar={false}
+        navigation
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
+        className="mySwiper"
       >
-        <FaChevronLeft />
-      </button>
-      {/* {slideData
-        .filter(
-          (slide, index) =>
-            index >= slideDetail.start && index <= slideDetail.end,
-        ) */}
-      {slideDetail.slides.map((slide, index) => (
-        <SlideItem key={slide.id} slide={slide} />
-      ))}
-      <button
-        type="button"
-        className="arrow-right"
-        id="right"
-        onClick={handleClickRight}
-      >
-        <FaChevronRight />
-      </button>
-      {/* 
-      <div className="slide-dots">
-        {.map((slide, index) => (
-          <span className="dot" key={slide.id}></span>
+        {slideData.map((item, index) => (
+          <SwiperSlide key={item.id}>
+            <SlideItem slide={item} />
+          </SwiperSlide>
         ))}
-      </div> */}
+      </Swiper>
     </Container>
   );
 };

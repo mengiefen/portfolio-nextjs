@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.section`
   width: 100%;
@@ -18,7 +18,8 @@ const Container = styled.section`
     display: flex;
     align-items: center;
     position: relative;
-    box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray}; 
+    box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};
+    animation: infinite;
 
     .skill-title {
       width: 40%;
@@ -34,7 +35,7 @@ const Container = styled.section`
       justify-content: center;
       padding: 0 3rem;
       border-radius: 40px;
-      box-shadow: 0 4px 8px 0 ${(props) => props.theme.gray}; 
+      box-shadow: 0 4px 8px 0 ${(props) => props.theme.gray};
     }
   }
 
@@ -52,11 +53,11 @@ const Container = styled.section`
     padding: 0.75rem;
     overflow: hidden;
     transition: all 0.5s;
-    box-shadow: 0 2px 8px 0 ${(props) => props.theme.gray};  
+    box-shadow: 0 2px 8px 0 ${(props) => props.theme.gray};
 
     :hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};  
+      box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};
     }
   }
 `;

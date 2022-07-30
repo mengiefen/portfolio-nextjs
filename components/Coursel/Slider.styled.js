@@ -5,7 +5,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 472px;
+  min-height: 620px;
   gap: 1rem;
   position: relative;
 
@@ -34,6 +34,70 @@ const Container = styled.div`
 
   .arrow-right {
     right: 2rem;
+  }
+
+  .swiper {
+    width: 90%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: #ed254eff;
+    color: #fafafa;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-weight: 700;
+    outline: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &::after {
+      font-size: 16px;
+    }
+  }
+
+  .swiper-button-prev {
+    &::after {
+      position: relative;
+      left: -1px;
+    }
+  }
+
+  .swiper-button-next {
+    &::after {
+      position: relative;
+      left: 1px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next {
+    left: 10px;
+    right: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    right: 10px;
+    left: auto;
+  }
+
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: auto;
+    pointer-events: none;
   }
 `;
 
