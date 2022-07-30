@@ -1,62 +1,40 @@
-import desktop from '../public/coursel/desktop.png';
+import desktop from "../public/coursel/desktop.png";
 // import bookStore from '../public/coursel/book-store.png';
-import covid19 from '../public/coursel/covid-19.png';
-import covidA from '../public/coursel/covid-a.png';
-import portfolio from '../public/coursel/portfolio-mockup.png';
-import portfolio1 from '../public/coursel/portfolio-mockup1.png';
+import covid19 from "../public/coursel/covid-19.png";
+import covidA from "../public/coursel/covid-a.png";
+import portfolio from "../public/coursel/portfolio-mockup.png";
+import portfolio1 from "../public/coursel/portfolio-mockup1.png";
+import tourHunter from "../public/coursel/tour-hunter.png";
 // utilityApp, blogApp, bookStore, tourHunter, todoList, awesomeBook, spaceTravel, capstone1, capstone2,
 
 const slideData = [
   {
     id: 1,
-    img: desktop,
-    title: 'Slide 1',
-    desc: 'Sample description for the carousel component',
+    img: portfolio,
+    title: "Portfolio",
+    desc: "A simple portfolio website that is built with HTML, CSS, and JavaScript.",
+    techs: ["HTML", "CSS", "JavaScript"],
+    liveLink: "https://mengiefen.github.io/personal-portfolio/",
+    sourceLink: "https://github.com/mengiefen/personal-portfolio",
+  },
+
+  {
+    id: 2,
+    img: covid19,
+    title: "Covid Info",
+    desc: "A SPA website built with React and Redux. In this application, the user is able to see covid data.",
+    techs: ["React", "Redux", "styled-component", "REST API"],
+    liveLink: "https://mengiefen.github.io/covid19-info-center/",
+    sourceLink: "https://github.com/mengiefen/covid19-info-center",
   },
   {
     id: 2,
-    img: portfolio,
-    title: 'Slide 2',
-    desc: 'Sample description for the carousel component',
-  },
-  {
-    id: 3,
-    img: portfolio1,
-    title: 'Slide 3',
-    desc: 'Sample description for the carousel component',
-  },
-  {
-    id: 4,
-    img: covidA,
-    title: 'Slide 4',
-    desc: 'Sample description for the carousel component',
-  },
-  {
-    id: 5,
-    img: covid19,
-    title: 'Slide 5',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
-  },
-
-  {
-    id: 6,
-    img: covid19,
-    title: 'Slide 6',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
-  },
-
-  {
-    id: 7,
-    img: covid19,
-    title: 'Slide 7',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
-  },
-
-  {
-    id: 8,
-    img: covid19,
-    title: 'Slide 8',
-    desc: 'The Covid-19 Info Center App is a website built with React. In this application, the user is able to see covid-19 data.',
+    img: tourHunter,
+    title: "Tour Hunter",
+    desc: "The Tour Hunter is full-feature website which gives users to select options for tours around the world to reserve and the admins to add and delete tours.",
+    techs: ["Ruby on Rails", "React/Redux", "PostgrSQL", "TailwindCSS"],
+    liveLink: "https://tourhunterapp.herokuapp.com/",
+    sourceLink: "https://github.com/mengiefen/tour-hunter",
   },
 ];
 

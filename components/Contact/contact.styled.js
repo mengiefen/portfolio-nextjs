@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   width: 90%;
@@ -54,6 +54,7 @@ const Container = styled(motion.section)`
 
     &:hover,
     &:focus {
+      background-color: ${({ theme }) => theme.bg};
       border: 0.5px solid ${({ theme }) => theme.green};
       box-shadow: 0 0 5px ${({ theme }) => theme.green};
     }

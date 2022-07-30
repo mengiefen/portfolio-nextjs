@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.section`
   display: flex;
@@ -6,7 +6,7 @@ const Container = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   color: ${(props) => props.theme.primary};
   background-color: ${({ theme }) => theme.bg};
 

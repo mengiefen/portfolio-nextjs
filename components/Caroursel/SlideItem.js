@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import React from 'react';
-import Container from './SlideItem.styled';
-import Link from 'next/link';
-import { VscArrowSmallRight } from 'react-icons/vsc';
+import Image from "next/image";
+import React from "react";
+import Container from "./SlideItem.styled";
+import Link from "next/link";
+import { VscArrowSmallRight } from "react-icons/vsc";
 
 const SlideItem = ({ slide }) => {
   return (
@@ -21,23 +21,17 @@ const SlideItem = ({ slide }) => {
       <div className="slide-info">
         <p className="desc">{slide.desc}</p>
         <div className="project-tech">
-          <span>REACT</span>
-          <span>Redux</span>
-          <span>SASS</span>
+          {slide.techs.map((tech) => {
+            return <span key={tech}>{tech}</span>;
+          })}
         </div>
         <div className="project-links">
-          <Link
-            href="https://www.linkedin.com/in/mengstufentaw/"
-            className="project-link"
-          >
+          <Link href={slide.liveLink} className="project-link">
             <a target="_blank">
-              See source <VscArrowSmallRight />{' '}
+              See source <VscArrowSmallRight />{" "}
             </a>
           </Link>
-          <Link
-            href="https://www.linkedin.com/in/mengstufentaw/"
-            className="project-link"
-          >
+          <Link href={slide.sourceLink} className="project-link">
             <a target="_blank">
               Live demo <VscArrowSmallRight />
             </a>

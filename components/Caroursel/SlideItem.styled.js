@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
@@ -63,12 +63,13 @@ const Container = styled.div`
     width: 100%;
     padding: 0.5rem 0;
     text-align: center;
-    background-color: ${({ theme }) => theme.green};
+    background-color: ${({ theme }) => theme.yellow};
     transform: rotate(-45deg) translateX(-25%) translateY(-60px);
     z-index: 1111;
   }
 
   .desc {
+    max-width: 90%;
     font-size: 0.8rem;
     color: ${({ theme }) => theme.primary};
   }
@@ -106,6 +107,7 @@ const Container = styled.div`
 
   .project-tech {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     font-size: 0.8rem;
