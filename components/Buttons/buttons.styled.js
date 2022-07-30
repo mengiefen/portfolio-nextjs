@@ -12,12 +12,17 @@ const Btn = styled.a`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0.8rem;
+  padding: 0.65rem;
   cursor: pointer;
   position: relative;
   transition: all 0.2s ease-out;
   text-decoration: none;
   text-align: center;
+
+  .btn-icon {
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+  }
 
   .slide {
     width: 100%;
