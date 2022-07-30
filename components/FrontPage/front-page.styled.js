@@ -14,6 +14,7 @@ const Container = styled.section`
     max-width: 60%;
     padding: 0 3%;
     margin-left: 2rem;
+    padding-top: 10rem;
   }
 
   .heading {
