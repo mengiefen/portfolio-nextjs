@@ -1,4 +1,4 @@
-import Carousel from '../Coursel/Carousel';
+import Carousel from '../Caroursel/Carousel';
 import Container from './portfolio.styled';
 
 const Portfolio = () => {
