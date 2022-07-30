@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle, { lightTheme, darkTheme } from "../styles/globalStyles";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { FaAngleUp } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { useState, useEffect } from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle, { lightTheme, darkTheme } from '../styles/globalStyles';
+import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import { FaAngleUp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   const [dark, setDark] = useState(true);
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
 
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY > 400) {
         setShowButton(true);
       } else {
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
   const goToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }) {
 }
 
 const spring = {
-  type: "spring",
+  type: 'spring',
   stiffness: 700,
   damping: 30,
 };

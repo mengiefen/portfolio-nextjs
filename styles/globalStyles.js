@@ -111,6 +111,16 @@ export const darkTheme = {
   green: '#1FB57B',
   yellow: '#FAD9A1',
   red: '#F37878',
+
+  device: {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
+  },
 };
 
 //
@@ -138,6 +148,16 @@ export const lightTheme = {
   green: '#1FB57B',
   yellow: '#FAD9A1',
   red: '#F37878',
+
+  device: {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
+  },
 };
 
 export default GlobalStyle;

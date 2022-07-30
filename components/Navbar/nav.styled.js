@@ -13,6 +13,14 @@ const Nav = styled(motion.nav)`
   background-color: ${(props) => props.theme.bg};
   border-top: 1px solid ${(props) => props.theme.tertiary};
 
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    width: 65%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+    width: 100%;
+  }
+
   .menu-list {
     display: flex;
     flex-direction: column;
