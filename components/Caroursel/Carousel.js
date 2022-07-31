@@ -4,7 +4,7 @@ import Slider from "./Slider";
 
 const Carousel = () => {
   return (
-    <Container initial={{ opacity: 0.5 }} whileInView={{ opacity: 1 }}>
+    <Container >
       <h2>
         My Projects
         <div className="border-bottom"></div>
