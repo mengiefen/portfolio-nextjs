@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +25,7 @@ const Container = styled.section`
     line-height: 0;
     letter-spacing: 4px;
     font-weight: bold;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     padding: 0;
     margin: 0;
   }
@@ -35,7 +36,7 @@ const Container = styled.section`
     text-align: center;
     color: ${(props) => props.theme.primary};
     text-transform: uppercase;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
   }
 
   .paragraph {
@@ -65,7 +66,7 @@ const Container = styled.section`
     width: 100%;
     height: 100%;
     background-color: ${(props) => props.theme.bg};
-    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.3 : 0.9)};
+    opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.3 : 0.9)};
     z-index: 10;
   }
 `;

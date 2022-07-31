@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { useState } from 'react';
+import styled from "styled-components";
+import { useState } from "react";
+
 import {
   FaFacebookSquare,
   FaTwitterSquare,
@@ -7,19 +8,33 @@ import {
   FaGithubSquare,
   FaAngellist,
   FaMedium,
-} from 'react-icons/fa';
-import Link from 'next/link';
+} from "react-icons/fa";
+import Link from "next/link";
 
 const SocialMedia = () => {
   return (
     <Container>
-      <div className="icon-list">       
+      <div className="icon-list">
         <Link href="https://twitter.com/MengistuFentaw">
-          <a target="_blank"><FaTwitterSquare className="fa twitter" /></a> 
+          <a target="_blank">
+            <FaTwitterSquare className="fa twitter" />
+          </a>
         </Link>
-        <Link href="https://www.linkedin.com/in/mengstufentaw/"><a target="_blank"><FaLinkedin className="fa linkedin" /> </a></Link>
-        <Link href="https://github.com/mengiefen"><a target="_blank"><FaGithubSquare className="fa github" /></a></Link>
-        <Link href="https://angel.co/u/mengefen"><a target="_blank"><FaAngellist className="fa angellist" /></a></Link>
+        <Link href="https://www.linkedin.com/in/mengstufentaw/">
+          <a target="_blank">
+            <FaLinkedin className="fa linkedin" />{" "}
+          </a>
+        </Link>
+        <Link href="https://github.com/mengiefen">
+          <a target="_blank">
+            <FaGithubSquare className="fa github" />
+          </a>
+        </Link>
+        <Link href="https://angel.co/u/mengefen">
+          <a target="_blank">
+            <FaAngellist className="fa angellist" />
+          </a>
+        </Link>
         {/* <Link href=''><a target="_blank"><FaMedium className="fa medium" /></a></Link> */}
       </div>
     </Container>
@@ -53,7 +68,7 @@ const Container = styled.div`
 
     &:hover {
       transform: scale(1.05);
-      color:  ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.primary};
     }
   }
 

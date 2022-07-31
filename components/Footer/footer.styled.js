@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const StyledFooter = styled.footer`
+const StyledFooter = styled(motion.footer)`
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.primary};
   height: 10vh;

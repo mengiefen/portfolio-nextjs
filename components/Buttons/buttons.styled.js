@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Btn = styled.a`
+const Btn = styled(motion.a)`
   background-color: ${(props) => props.theme.tertiary};
   border: 2px solid ${(props) => props.theme.tertiary};
   color: ${(props) => props.theme.primary};
@@ -66,7 +67,7 @@ const Btn = styled.a`
   }
 `;
 
-export const ButtonOutline = styled.a`
+export const ButtonOutline = styled(motion.a)`
   border: 2px solid ${(props) => props.theme.tertiary};
   color: ${(props) => props.theme.tertiary};
   background-color: ${(props) => props.theme.bg};

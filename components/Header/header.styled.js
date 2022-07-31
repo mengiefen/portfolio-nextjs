@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Header = styled.header`
+const Header = styled(motion.header)`
   position: absolute;
   top: 0;
   left: 0;

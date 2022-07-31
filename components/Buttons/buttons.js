@@ -1,5 +1,6 @@
 import Btn from './buttons.styled';
 
+
 const Button = ({ type, text, link, icon }) => {
   return (
     <Btn

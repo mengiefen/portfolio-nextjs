@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   width: 100%;
   height: 100vh;
   background-color: ${(props) => props.theme.bg};

@@ -6,7 +6,14 @@ import { VscArrowSmallRight } from "react-icons/vsc";
 
 const SlideItem = ({ slide }) => {
   return (
-    <Container>
+    <Container
+      whileHover={{
+        scale: 1.008,
+        rotateX: 1,
+      }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       <h2 className="title">{slide.title}</h2>
       <div className="image-holder">
         <Image

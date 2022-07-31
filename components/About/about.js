@@ -1,21 +1,27 @@
-import Image from 'next/image';
-import Container from './about.styled';
-import bgImg from '../../public/picture.png';
+import Image from "next/image";
+import Container from "./about.styled";
+import bgImg from "../../public/picture.png";
+import { motion } from "framer-motion";
 
-import communication from '../../public/communication.svg';
-import webdesign from '../../public/webdesign.svg';
-import remotework from '../../public/remotework.svg';
-import workflows from '../../public/workflows.svg';
-import test from '../../public/test.svg';
+import communication from "../../public/communication.svg";
+import webdesign from "../../public/webdesign.svg";
+import remotework from "../../public/remotework.svg";
+import workflows from "../../public/workflows.svg";
+import test from "../../public/test.svg";
 
-import Button from '../Buttons/buttons';
-import { FaChevronRight } from 'react-icons/fa';
+import Button from "../Buttons/buttons";
+import { FaChevronRight } from "react-icons/fa";
 
 const About = () => {
   return (
     <Container id="about">
       <div className="content">
-        <figure className="img">
+        <motion.figure
+          className="img"
+          initial={{ scale: 0.5 }}
+          whileInView={{ scale: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <Image
             src={bgImg}
             width={1900}
@@ -23,8 +29,13 @@ const About = () => {
             alt="picture of me"
             className="img"
           />
-        </figure>
-        <aside className="desc">
+        </motion.figure>
+        <motion.aside
+          className="desc"
+          initial={{ x: -20 }}
+          whileInView={{ x: 0 }}
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <h2 className="title">About Me</h2>
           <p className="general-desc">
             I am a Full-stack Developer who enjoys learning new programming
@@ -109,9 +120,10 @@ const About = () => {
             text="See my resume"
             className="btn"
             target="_blank"
+            whileTap={{ scale: 0.8 }}
             link="https://docs.google.com/document/d/1BfcktXwmWIs0BJsUC0Kqtg6KXQvXh23I_-bxO9DQ7Lg/edit?usp=sharing"
           />
-        </aside>
+        </motion.aside>
       </div>
     </Container>
   );
