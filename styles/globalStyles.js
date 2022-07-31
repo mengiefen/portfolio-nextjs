@@ -14,8 +14,14 @@ body{
   height:96vh;
   width: 94vw;  
   margin: 0 auto;
-  font-family: 'Bebas Neue', cursive;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Bebas Neue', cursive;
+  font-family: 'Montserrat', sans-serif; */
+
+font-family: 'Bebas Neue', cursive;
+font-family: 'Edu TAS Beginner', cursive;
+
+font-family: 'Pacifico', cursive;
+font-family: 'Open Sans', sans-serif;
   position: relative;
 }
 

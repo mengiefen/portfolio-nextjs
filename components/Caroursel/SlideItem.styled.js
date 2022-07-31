@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.div)`
   display: flex;
@@ -65,7 +65,7 @@ const Container = styled(motion.div)`
     padding: 0.5rem 0;
     text-align: center;
     background-color: ${({ theme }) => theme.yellow};
-    transform: rotate(-45deg) translateX(-25%) translateY(-60px);
+    transform: rotate(-35deg) translateX(-32%) translateY(-70px);
     z-index: 1111;
   }
 
