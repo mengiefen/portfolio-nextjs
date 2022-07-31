@@ -1,6 +1,6 @@
-import Container from "./skills.styled";
-import Image from "next/image";
-import logos from "../../data/skillLogo";
+import Container from './skills.styled';
+import Image from 'next/image';
+import logos from '../../data/skillLogo';
 
 const Skills = () => {
   return (
@@ -14,7 +14,7 @@ const Skills = () => {
 
         <div className="languages">
           {logos.map((logo) => (
-            <div className="icon-holder">
+            <div className="icon-holder" key={logo.id}>
               <Image
                 src={logo.img}
                 width={50}

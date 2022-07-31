@@ -17,6 +17,8 @@ const slideData = [
     techs: ['HTML', 'CSS', 'JavaScript'],
     liveLink: 'https://mengiefen.github.io/personal-portfolio/',
     sourceLink: 'https://github.com/mengiefen/personal-portfolio',
+    badge: '#1FB57B',
+    textColor: '#011936FF',
   },
 
   {
@@ -27,6 +29,8 @@ const slideData = [
     techs: ['React', 'Redux', 'styled-component', 'REST API'],
     liveLink: 'https://mengiefen.github.io/covid19-info-center/',
     sourceLink: 'https://github.com/mengiefen/covid19-info-center',
+    badge: '#F9DC5CFF',
+    textColor: '#011936FF',
   },
   {
     id: 3,
@@ -36,6 +40,8 @@ const slideData = [
     techs: ['Ruby on Rails', 'React/Redux', 'PostgrSQL', 'TailwindCSS'],
     liveLink: 'https://tourhunterapp.herokuapp.com/',
     sourceLink: 'https://github.com/mengiefen/tour-hunter',
+    badge: '#F37878',
+    textColor: '#011936FF',
   },
 
   {
@@ -46,6 +52,8 @@ const slideData = [
     techs: ['JavaScript', 'HTML', 'CSS', 'REST API'],
     liveLink: 'https://mengiefen.github.io/leaderboard-list-app/',
     sourceLink: 'https://github.com/mengiefen/leaderboard-list-app',
+    badge: '#1FB57B',
+    textColor: '#011936FF',
   },
 
   {
@@ -56,6 +64,8 @@ const slideData = [
     techs: ['Ruby', 'Ruby on Rails', 'SASS', 'PostgreSQL'],
     liveLink: 'https://sheltered-reef-51558.herokuapp.com/',
     sourceLink: 'https://github.com/mengiefen/utility-app',
+    badge: '#F9DC5CFF',
+    textColor: '#011936FF',
   },
 
   {
@@ -66,6 +76,8 @@ const slideData = [
     techs: ['Ruby on Rails', 'Ruby', 'Bootstrap', 'PostgreSQL'],
     liveLink: 'https://mengiefen.github.io/personal-portfolio/',
     sourceLink: 'https://github.com/mengiefen/recipe-app',
+    badge: '#F37878',
+    textColor: '#011936FF',
   },
 
   {
@@ -76,6 +88,8 @@ const slideData = [
     techs: ['JavaScript', 'HTML', 'CSS', 'React', 'Redux', 'REST API'],
     liveLink: 'https://mengiefen.github.io/desktop-app/',
     sourceLink: 'https://github.com/mengiefen/blog-app',
+    badge: '#1FB57B',
+    textColor: '#011936FF',
   },
 ];
 

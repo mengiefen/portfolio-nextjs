@@ -19,7 +19,18 @@ const Container = styled(motion.section)`
       text-transform: uppercase;
       font-size: 1.75rem;
       font-weight: 700;
+      letter-spacing: 2.5px;
     }
+
+    .border-bottom {
+      width: 80px;
+      margin-bottom: 1rem;
+      border-bottom: 4px solid ${({ theme }) => theme.tertiary};
+      margin-left: 124px;
+
+      align-self: start;
+    }
+
     p {
       font-weight: 400;
       line-height: 1.5;

@@ -1,16 +1,16 @@
-import Image from "next/image";
-import Container from "./about.styled";
-import bgImg from "../../public/picture.png";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import Container from './about.styled';
+import bgImg from '../../public/picture.png';
+import { motion } from 'framer-motion';
 
-import communication from "../../public/communication.svg";
-import webdesign from "../../public/webdesign.svg";
-import remotework from "../../public/remotework.svg";
-import workflows from "../../public/workflows.svg";
-import test from "../../public/test.svg";
+import communication from '../../public/communication.svg';
+import webdesign from '../../public/webdesign.svg';
+import remotework from '../../public/remotework.svg';
+import workflows from '../../public/workflows.svg';
+import test from '../../public/test.svg';
 
-import Button from "../Buttons/buttons";
-import { FaChevronRight } from "react-icons/fa";
+import Button from '../Buttons/buttons';
+import { FaChevronRight } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -20,7 +20,7 @@ const About = () => {
           className="img"
           initial={{ scale: 0.5 }}
           whileInView={{ scale: 1 }}
-          transition={{ ease: "easeOut", duration: 1 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
         >
           <Image
             src={bgImg}
@@ -34,9 +34,10 @@ const About = () => {
           className="desc"
           initial={{ x: -20 }}
           whileInView={{ x: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
         >
           <h2 className="title">About Me</h2>
+          <div className="border-bottom"></div>
           <p className="general-desc">
             I am a Full-stack Developer who enjoys learning new programming
             languages and frameworks. I am the kind of person who likes

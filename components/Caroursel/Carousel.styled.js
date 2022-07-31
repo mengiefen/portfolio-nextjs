@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   display: flex;
@@ -18,6 +18,7 @@ const Container = styled(motion.section)`
     align-self: flex-start;
     margin-left: 6%;
     padding-bottom: 0.5rem;
+    letter-spacing: 2.5px;
   }
 
   .border-bottom {

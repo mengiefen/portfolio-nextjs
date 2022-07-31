@@ -1,13 +1,13 @@
-import Container, { Button } from "./contact.styled";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import Container, { Button } from './contact.styled';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const handleSubmit = (e) => {
@@ -21,14 +21,14 @@ const Contact = () => {
       (result) => {
         console.log(result.text);
         setFormData({
-          name: "",
-          email: "",
-          message: "",
+          name: '',
+          email: '',
+          message: '',
         });
       },
       (error) => {
         console.log(error.text);
-      }
+      },
     );
   };
 
@@ -47,6 +47,7 @@ const Contact = () => {
     >
       <div className="welcome">
         <h2>Contact me</h2>
+        <div className="border-bottom"></div>
         <p>
           I&apos;m always interested in hearing about new projects, so if
           you&apos;d like to chat please get in touch.

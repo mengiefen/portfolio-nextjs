@@ -22,13 +22,7 @@ const Container = styled(motion.div)`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1rem;
-    background-color: ${({ theme }) => theme.tertiary};
-    background: linear-gradient(
-      to right,
-      ${({ theme }) => theme.tertiary} 0%,
-      ${({ theme }) => theme.secondary} 100%
-    );
+    height: 0.5rem;
   }
 
   /* Media Query to vary the size of the slide item */
@@ -60,13 +54,14 @@ const Container = styled(motion.div)`
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 1.5px;
-    color: ${({ theme }) => theme.tertiary};
+    /* color: ${({ theme }) => theme.tertiary}; */
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
     text-align: center;
-    background-color: ${({ theme }) => theme.yellow};
+    /* background-color: ${({ theme }) => theme.yellow}; */
     transform: rotate(-35deg) translateX(-32%) translateY(-70px);
     z-index: 1111;
+    font-family: 'Edu TAS Beginner', cursive;
   }
 
   .desc {

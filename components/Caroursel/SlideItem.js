@@ -1,8 +1,8 @@
-import Image from "next/image";
-import React from "react";
-import Container from "./SlideItem.styled";
-import Link from "next/link";
-import { VscArrowSmallRight } from "react-icons/vsc";
+import Image from 'next/image';
+import React from 'react';
+import Container from './SlideItem.styled';
+import Link from 'next/link';
+import { VscArrowSmallRight } from 'react-icons/vsc';
 
 const SlideItem = ({ slide }) => {
   return (
@@ -13,7 +13,12 @@ const SlideItem = ({ slide }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
-      <h2 className="title">{slide.title}</h2>
+      <h2
+        className="title"
+        style={{ backgroundColor: slide.badge, color: slide.textColor }}
+      >
+        {slide.title}
+      </h2>
       <div className="image-holder">
         <Image
           src={slide.img}
@@ -34,7 +39,7 @@ const SlideItem = ({ slide }) => {
         <div className="project-links">
           <Link href={slide.sourceLink} className="project-link">
             <a target="_blank">
-              See source <VscArrowSmallRight />{" "}
+              See source <VscArrowSmallRight />{' '}
             </a>
           </Link>
           <Link href={slide.liveLink} className="project-link">
@@ -44,7 +49,10 @@ const SlideItem = ({ slide }) => {
           </Link>
         </div>
       </div>
-      <div className="border-decor"></div>
+      <div
+        className="border-decor"
+        style={{ backgroundColor: slide.badge, color: slide.textColor }}
+      ></div>
     </Container>
   );
 };

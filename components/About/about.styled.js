@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -37,6 +37,17 @@ const Container = styled(motion.section)`
 
   .title {
     text-transform: uppercase;
+    align-self: flex-end;
+    font-size: 1.75rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+  }
+
+  .border-bottom {
+    width: 80px;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid ${({ theme }) => theme.tertiary};
+    margin-left: auto;
   }
 
   .btn {
