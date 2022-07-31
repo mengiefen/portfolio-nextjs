@@ -39,19 +39,19 @@ const About = () => {
           <h2 className="title">About Me</h2>
           <div className="border-bottom"></div>
           <p className="general-desc">
-            I am a Full-stack Developer who enjoys learning new programming
+            I&apos;m a Full-stack Developer who enjoys learning new programming
             languages and frameworks. I am the kind of person who likes
             challenging myself and learning from it. I can do full-featured
-            front-end websites using HTML, CSS, JavaScript, and React. I&apos;m
-            also an electrical engineer who loves working on embedded and power
-            electronics & drives.
+            front-end websites using HTML, CSS, JavaScript, React, and Ruby,
+            Ruby on Rails. I&apos;m also an electrical engineer who loves
+            working on embedded system and power electronics & drives.
           </p>
 
           <p className="general-desc">
-            I worked also as an engineering instructor in local college for more
-            than 11 years This experiance coupled with my skill in programming
+            I&apos;m also an engineering instructor in local college for more
+            than 11 years. This experiance coupled with my skill in programming
             gave me an opportunity to adapt differnet working enviroment
-            responsibly.
+            responsiblity.
           </p>
           {/* <div className="card-list">
               <div className="card">
