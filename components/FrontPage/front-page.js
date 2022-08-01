@@ -4,6 +4,7 @@ import Layout from '../Layout/layout';
 import Container from './front-page.styled';
 import bgImg from '../../public/picture.png';
 import SocialMedia from '../SocialMedia/SocialMedia';
+import Typed from 'react-typed';
 
 const FrontPage = () => {
   return (
@@ -15,7 +16,14 @@ const FrontPage = () => {
             Hello, <span>I&apos;m Mengstu</span>
           </h1>
           <h2 className="sub-heading">
-            <span>Fullstack</span> Developer
+            <Typed
+              strings={['Frontend', 'Backend', 'Fullstack']}
+              typeSpeed={80}
+              backSpeed={80}
+              backDelay={1000}
+              loop
+            />
+            Developer
           </h2>
           <p className="paragraph">
             I can help you build a product, feature, or website. Look through

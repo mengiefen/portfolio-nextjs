@@ -4,6 +4,7 @@ import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 import INBOX from '../../public/inbox.svg';
 import ENVELOPE from '../../public/envelope.svg';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const form = useRef();
@@ -96,7 +97,13 @@ const Contact = () => {
             Send message
           </Button>
         </form>
-        <Image src={ENVELOPE} width={300} height={300} alt="picture of me" />
+        <motion.div
+          initial={{ scale: 0.5, x: 100 }}
+          whileInView={{ scale: 0.75, x: 0 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
+        >
+          <Image src={ENVELOPE} width={300} height={300} alt="picture of me" />
+        </motion.div>
       </div>
     </Container>
   );

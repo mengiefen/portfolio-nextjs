@@ -27,7 +27,7 @@ const Container = styled(motion.section)`
 
   .heading {
     color: ${(props) => props.theme.primary};
-    font-size: min(3.5vw, 1.5rem);
+    font-size: min(3.5vw, 2rem);
     text-transform: capitalize;
     line-height: 0;
     letter-spacing: 4px;
@@ -45,7 +45,7 @@ const Container = styled(motion.section)`
   }
 
   .sub-heading {
-    font-size: min(4vw, 2rem);
+    font-size: min(4vw, 1.2rem);
     letter-spacing: 3px;
     padding-left: 2rem;
     text-align: center;
