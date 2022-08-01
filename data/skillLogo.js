@@ -25,28 +25,28 @@ export const professionalSkill = [
     alt: 'remote work',
     img: REMOTE,
     title: 'Remote Work',
-    desc: 'Exeperiance working in remote enviroment with multicultural enviroment.',
+    desc: 'Experience working in a remote environment with a multicultural environment',
   },
   {
     id: 2,
     alt: 'collaboration',
     img: COLLABORATION,
     title: 'Communication',
-    desc: 'Proven ability to communicate with team members and clients.',
+    desc: 'Proven ability to communicate with team members and clients',
   },
   {
     id: 3,
     alt: 'web design',
     img: WEBDESIGN,
     title: 'Web Design',
-    desc: 'Have skills in web design and development with attention to details.',
+    desc: 'Have skills in web design and development with attention to detail',
   },
   {
     id: 4,
     alt: 'software hardware',
     img: SOFTHARD,
     title: 'Hardware',
-    desc: 'Can demonstrate and work in enviroment that requiressoftware and hardware development.',
+    desc: 'Can demonstrate and work in an environment that requires software and hardware development',
   },
 ];
 

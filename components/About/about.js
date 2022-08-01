@@ -37,15 +37,15 @@ const About = () => {
             languages and frameworks. I&apos;m the kind of person who likes
             challenging myself and learning from it. I can do full-featured
             front-end websites using HTML, CSS, JavaScript, React, Ruby, and
-            Ruby on Rails. I&apos;m also an electrical engineer who loves
-            working on embedded system and power electronics & drives.
+            Ruby on Rails. I&apos;m an electrical engineer who loves working on
+            embedded systems, power electronics & drives.
           </p>
 
           <p className="general-desc">
-            I&apos;m also an engineering instructor in local college working for
-            more than 11 years. This experiance coupled with my skill in
-            programming gave me an opportunity to adapt differnet working
-            enviroment responsiblity.
+            I&apos;m also an engineering instructor in a local college working
+            for more than 11 years. This experience coupled with my skill in
+            programming gave me an opportunity to adapt to different working
+            environments.
           </p>
           {/* <div className="card-list">
               <div className="card">
