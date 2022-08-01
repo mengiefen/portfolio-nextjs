@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { ButtonOutline } from "../Buttons/buttons.styled";
-import Layout from "../Layout/layout";
-import Container from "./front-page.styled";
-import bgImg from "../../public/picture.png";
-import SocialMedia from "../SocialMedia/SocialMedia";
+import Image from 'next/image';
+import { ButtonOutline } from '../Buttons/buttons.styled';
+import Layout from '../Layout/layout';
+import Container from './front-page.styled';
+import bgImg from '../../public/picture.png';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 const FrontPage = () => {
   return (
@@ -14,7 +14,9 @@ const FrontPage = () => {
           <h1 className="heading">
             Hello, <span>I&apos;m Mengstu</span>
           </h1>
-          <h2 className="sub-heading">Full-stack Developer</h2>
+          <h2 className="sub-heading">
+            <span>Fullstack</span> Developer
+          </h2>
           <p className="paragraph">
             I can help you build a product , feature or website. Look through
             some of my work and experience! If you like what you see and have a
@@ -26,8 +28,7 @@ const FrontPage = () => {
             whileInView={{ y: 20, x: 0, scale: [0.6, 1, 0.75, 1] }}
             transition={{ times: [0, 0.1, 0.9, 1] }}
           >
-            {" "}
-            Contact me{" "}
+            Contact me
           </ButtonOutline>
         </aside>
         <figure>

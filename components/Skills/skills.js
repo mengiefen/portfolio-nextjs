@@ -1,7 +1,7 @@
-import Container from "./skills.styled";
-import Image from "next/image";
-import logos from "../../data/skillLogo";
-import ProfessionalSkills from "./ProfessionalSkills";
+import Container from './skills.styled';
+import Image from 'next/image';
+import logos from '../../data/skillLogo';
+import ProfessionalSkills from './ProfessionalSkills';
 
 const Skills = () => {
   return (
@@ -10,7 +10,7 @@ const Skills = () => {
       initial={{ opacity: 0.9 }}
       whileInView={{ opacity: 1 }}
     >
-      <h2 className="skill-title">SKILLS</h2>
+      <h2 className="skill-title">What I DO</h2>
       <div className="border-bottom"></div>
       <div className="skill-list">
         <div className="languages">

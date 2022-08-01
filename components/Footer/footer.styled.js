@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const StyledFooter = styled(motion.footer)`
   background-color: ${({ theme }) => theme.bg};
@@ -22,31 +22,32 @@ const StyledFooter = styled(motion.footer)`
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
     color: ${({ theme }) => theme.gray};
-
-    &:hover {
-      transform: scale(1.05);
-      color: ${({ theme }) => theme.primary};
-    }
-  }
-  /* .facebook {
-    color: #1877f2;
   }
 
   .twitter {
-    color: #1da1f2;
+    &:hover {
+      color: #1da1f2;
+      transform: scale(1.05);
+    }
   }
   .linkedin {
-    color: #0a66c2;
+    &:hover {
+      color: #0a66c2;
+      transform: scale(1.05);
+    }
   }
   .github {
-    color: #171515;
+    &:hover {
+      color: #171515;
+      transform: scale(1.05);
+    }
   }
   .angellist {
-    color: #000;
+    &:hover {
+      color: #000;
+      transform: scale(1.05);
+    }
   }
-  .medium {
-    color: #000;
-  } */
 `;
 
 export default StyledFooter;

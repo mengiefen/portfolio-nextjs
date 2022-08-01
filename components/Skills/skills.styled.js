@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -31,7 +31,7 @@ const Container = styled(motion.section)`
     position: relative;
     padding: 1rem;
     width: 80%;
-    height: 80%;
+    height: 75%;
     background-color: ${({ theme }) => theme.bg};
     color: ${(props) => props.theme.bg};
     border-radius: 1rem;
@@ -130,7 +130,7 @@ const Container = styled(motion.section)`
       flex-direction: column;
       align-items: center;
       border-radius: 5px;
-      padding: 0.5rem;
+      padding: 1rem;
       box-shadow: 0 0 4px ${({ theme }) => theme.gray};
       transition: all 0.5s ease-in-out;
 
@@ -154,6 +154,7 @@ const Container = styled(motion.section)`
     .skill-desc {
       text-align: center;
       color: ${({ theme }) => theme.primary};
+      padding: 1.5rem 0;
     }
   }
 `;

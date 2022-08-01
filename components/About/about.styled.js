@@ -4,10 +4,18 @@ import { motion } from 'framer-motion';
 const Container = styled(motion.section)`
   width: 100%;
   height: 100vh;
-  background-color: ${(props) => props.theme.bg};
+  background-color: ${(props) => props.theme.bg1};
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  background: linear-gradient(
+    -65deg,
+    ${(props) => props.theme.green} 0%,
+    ${(props) => props.theme.bg1} 15%,
+    ${(props) => props.theme.bg} 85%,
+    ${(props) => props.theme.gray} 100%
+  );
 
   .content {
     display: flex;
@@ -19,7 +27,14 @@ const Container = styled(motion.section)`
     flex: 1;
     align-self: center;
     filter: grayscale(0.7);
-    border-radius: 100% 100% 0 100%;
+    border-radius: 50%;
+    transition: filter 0.5s ease-in-out;
+    width: 50%;
+    height: auto;
+
+    &:hover {
+      filter: grayscale(0);
+    }
   }
 
   .desc {
@@ -38,7 +53,7 @@ const Container = styled(motion.section)`
   .title {
     text-transform: uppercase;
     align-self: flex-end;
-    font-size: 1.75rem;
+    font-size: 2rem;
     letter-spacing: 2.5px;
     font-weight: 700;
   }

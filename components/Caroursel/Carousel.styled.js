@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   display: flex;
@@ -14,10 +14,10 @@ const Container = styled(motion.section)`
 
   h2 {
     text-transform: uppercase;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
-    align-self: flex-start;
-    margin-left: 6%;
+    align-self: flex-end;
+    margin-right: 5%;
     padding-bottom: 0.5rem;
     letter-spacing: 2.5px;
   }
@@ -26,6 +26,7 @@ const Container = styled(motion.section)`
     width: 40%;
     padding-top: 1rem;
     border-bottom: 4px solid ${({ theme }) => theme.tertiary};
+    margin-right: 5%;
     margin-left: auto;
   }
 

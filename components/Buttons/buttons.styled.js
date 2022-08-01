@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Btn = styled(motion.a)`
   background-color: ${(props) => props.theme.tertiary};
   border: 2px solid ${(props) => props.theme.tertiary};
-  color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.bg};
   min-width: 150px;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,7 @@ export const ButtonOutline = styled(motion.a)`
   background-color: ${(props) => props.theme.bg};
   min-width: 150px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.5px;
   padding: 1rem;
   cursor: pointer;
@@ -83,7 +83,7 @@ export const ButtonOutline = styled(motion.a)`
 
   &:hover {
     background-color: ${(props) => props.theme.tertiary};
-    color: ${({ theme }) => theme.primary};
+    color: white;
   }
 `;
 

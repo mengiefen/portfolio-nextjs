@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Header = styled(motion.header)`
   position: absolute;
@@ -13,6 +13,13 @@ const Header = styled(motion.header)`
   flex-direction: column;
   justify-content: center;
   z-index: 1111;
+  background: linear-gradient(
+    45deg,
+    ${(props) => props.theme.gray} 0%,
+    ${(props) => props.theme.bg1} 15%,
+    ${(props) => props.theme.bg} 85%,
+    ${(props) => props.theme.green} 100%
+  );
 
   .header {
     display: flex;

@@ -1702,6 +1702,14 @@ react-is@^18.0.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.0.0.tgz"
   integrity sha512-yUcBYdBBbo3QiPsgYDcfQcIkGZHfxOaoE6HLSnr1sPzMhdyxusbfKOSUbSd/ocGi32dxcj366PsTj+5oggeKKw==
 
+react-particles@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/react-particles/-/react-particles-2.1.4.tgz#b7b97b6d4c21ce3c2fc284a50685ea8faac0bc96"
+  integrity sha512-fZsnuP0fn4As7XWp29XRDXGOJMAyJArqgMzeHHkc3JiiKkBtP+jUnFeye8/n3LVHBx74uIPmeCjslV7XLMkO6Q==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    tsparticles-engine "^2.0.6"
+
 react-slick@^0.29.0:
   version "0.29.0"
   resolved "https://registry.npmjs.org/react-slick/-/react-slick-0.29.0.tgz"
@@ -1999,6 +2007,11 @@ tslib@^2.1.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
+
+tsparticles-engine@^2.0.6:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/tsparticles-engine/-/tsparticles-engine-2.1.4.tgz#9dd6c0bc8547249ddba6dc0f9f453113999464c4"
+  integrity sha512-V+2INRD9whshxM2DQQ/QWzboEIyPy95fwCf5I+zVNCYDdCWh5/w/AK/UY3k0/slcrxDyZOErNj1NygGSdxqy7w==
 
 tsutils@^3.21.0:
   version "3.21.0"

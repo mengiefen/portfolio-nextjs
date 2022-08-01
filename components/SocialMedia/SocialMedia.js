@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { useState } from "react";
+import styled from 'styled-components';
+import { useState } from 'react';
 
 import {
   FaFacebookSquare,
@@ -8,13 +8,13 @@ import {
   FaGithubSquare,
   FaAngellist,
   FaMedium,
-} from "react-icons/fa";
-import Link from "next/link";
+} from 'react-icons/fa';
+import Link from 'next/link';
 
 const SocialMedia = () => {
   return (
     <Container>
-      <div className="icon-list">
+      <div className="icon-list ">
         <Link href="https://twitter.com/MengistuFentaw">
           <a target="_blank">
             <FaTwitterSquare className="fa twitter" />
@@ -22,7 +22,7 @@ const SocialMedia = () => {
         </Link>
         <Link href="https://www.linkedin.com/in/mengstufentaw/">
           <a target="_blank">
-            <FaLinkedin className="fa linkedin" />{" "}
+            <FaLinkedin className="fa linkedin" />{' '}
           </a>
         </Link>
         <Link href="https://github.com/mengiefen">
@@ -47,9 +47,8 @@ const Container = styled.div`
   left: 0;
   min-height: 10rem;
   min-width: 2rem;
-
   transition: all 1s ease-in-out;
-  background-color: ${({ theme }) => theme.bg};
+  /* background-color: ${({ theme }) => theme.bg}; */
   padding: 0.5rem 0;
   border-radius: 5px;
 
@@ -64,33 +63,46 @@ const Container = styled.div`
     font-size: 1.75rem;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.gray};
+  }
 
+  .facebook {
     &:hover {
+      color: #1877f2;
       transform: scale(1.05);
-      color: ${({ theme }) => theme.primary};
     }
   }
 
-  /* .facebook {
-    color: #1877f2;
-  }
-
   .twitter {
-    color: #1da1f2;
+    &:hover {
+      color: #1da1f2;
+      transform: scale(1.05);
+    }
   }
   .linkedin {
-    color: #0a66c2;
+    &:hover {
+      color: #0a66c2;
+      transform: scale(1.05);
+    }
   }
   .github {
-    color: #171515;
+    &:hover {
+      color: #171515;
+      transform: scale(1.05);
+    }
   }
   .angellist {
-    color: #000;
+    &:hover {
+      color: #000;
+      transform: scale(1.05);
+    }
   }
   .medium {
-    color: #000;
-  } */
+    &:hover {
+      color: #000;
+      transform: scale(1.05);
+    }
+  }
 `;
 
 export default SocialMedia;

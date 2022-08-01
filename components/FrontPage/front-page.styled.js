@@ -6,7 +6,14 @@ const Container = styled(motion.section)`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: ${(props) => props.theme.bg};
+  background-color: ${(props) => props.theme.bg1};
+  background: linear-gradient(
+    65deg,
+    ${(props) => props.theme.gray} 0%,
+    ${(props) => props.theme.bg} 15%,
+    ${(props) => props.theme.bg1} 85%,
+    ${(props) => props.theme.green} 100%
+  );
 
   .text-area {
     display: flex;
@@ -20,29 +27,36 @@ const Container = styled(motion.section)`
 
   .heading {
     color: ${(props) => props.theme.primary};
-    font-size: min(7.5vw, 2rem);
+    font-size: min(3.5vw, 1.5rem);
     text-transform: capitalize;
     line-height: 0;
     letter-spacing: 4px;
     font-weight: bold;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Edu TAS Beginner', cursive;
-    padding: 0;
-    margin: 0;
-
-    span {
-      color: ${(props) => props.theme.secondary};
-    }
+    /* font-family: 'Arbutus', cursive; */
+    /* font-family: 'Bebas Neue', cursive; */
+    /* font-family: 'Edu TAS Beginner', cursive; */
+    /* font-family: 'Margarine', cursive; */
+    /* font-family: 'Nova Oval', cursive; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Yatra One', cursive;
+    font-family: 'Zen Dots', cursive;
   }
 
   .sub-heading {
-    font-size: min(5vw, 3.5rem);
+    font-size: min(4vw, 2rem);
     letter-spacing: 3px;
     padding-left: 2rem;
     text-align: center;
     color: ${(props) => props.theme.primary};
     font-family: 'Bebas Neue', cursive;
     font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Zen Dots', cursive;
+
+    span {
+      color: ${(props) => props.theme.secondary};
+    }
   }
 
   .paragraph {
@@ -63,6 +77,7 @@ const Container = styled(motion.section)`
 
   .img {
     clip-path: polygon(50% 100%, 100% 38%, 75% 0, 25% 0, 0% 38%);
+    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.5 : 0.2)};
   }
 
   .overlay {
@@ -72,7 +87,7 @@ const Container = styled(motion.section)`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: ${(props) => props.theme.bg};
+    /* background-color: ${(props) => props.theme.bg}; */
     opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.3 : 0.9)};
     z-index: 10;
   }

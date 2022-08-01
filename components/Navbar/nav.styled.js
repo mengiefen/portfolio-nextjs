@@ -13,6 +13,13 @@ const Nav = styled(motion.nav)`
   background-color: ${(props) => props.theme.bg};
   border-top: 1px solid ${(props) => props.theme.tertiary};
 
+  background: linear-gradient(
+    to bottom,
+
+    ${(props) => props.theme.bg1} 85%,
+    ${(props) => props.theme.gray} 100%
+  );
+
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     width: 65%;
   }

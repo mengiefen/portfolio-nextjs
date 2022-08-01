@@ -5,6 +5,7 @@ import FrontPage from '../components/FrontPage/front-page';
 import Portfolio from '../components/Portfolio/portfolio';
 import Skills from '../components/Skills/skills';
 import Footer from '../components/Footer/footer';
+import Animation from '../components/FrontPage/Animation';
 
 const Home = () => {
   return (
@@ -16,9 +17,10 @@ const Home = () => {
       <FrontPage />
       <About />
       <Skills />
-      <Portfolio />     
+      <Portfolio />
       <Contact />
       <Footer />
+      <Animation />
     </main>
   );
 };
