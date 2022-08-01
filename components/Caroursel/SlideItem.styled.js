@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.div)`
   display: flex;
@@ -61,7 +61,7 @@ const Container = styled(motion.div)`
     /* background-color: ${({ theme }) => theme.yellow}; */
     transform: rotate(-35deg) translateX(-32%) translateY(-70px);
     z-index: 1111;
-    font-family: 'Edu TAS Beginner', cursive;
+    font-family: "Edu TAS Beginner", cursive;
   }
 
   .desc {
@@ -111,9 +111,14 @@ const Container = styled(motion.div)`
   }
 
   .project-tech span {
-    background-color: ${({ theme }) => theme.tertiary};
+    background-color: ${({ theme }) => theme.gray};
     padding: 0.2rem 0.5rem;
     border-radius: 20px;
+    transition: background-color 0.35s;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.tertiary};
+    }
   }
 `;
 
