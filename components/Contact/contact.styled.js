@@ -7,9 +7,17 @@ const Container = styled(motion.section)`
   background-color: ${(props) => props.theme.bg};
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   color: ${(props) => props.theme.primary};
   padding: 1rem 5%;
+
+  background: linear-gradient(
+    65deg,
+    ${(props) => props.theme.gray} 0%,
+    ${(props) => props.theme.bg} 15%,
+    ${(props) => props.theme.bg1} 90%,
+    ${(props) => props.theme.green} 100%
+  );
 
   .welcome {
     display: flex;
@@ -26,20 +34,27 @@ const Container = styled(motion.section)`
       width: 80px;
       margin-bottom: 1rem;
       border-bottom: 4px solid ${({ theme }) => theme.tertiary};
-      margin-left: 124px;
-
-      align-self: start;
     }
 
     p {
       font-weight: 400;
       line-height: 1.5;
+      padding-left: 3rem;
+      width: 80%;
       margin-bottom: 1rem;
+      align-self: left;
     }
   }
+
+  .form-holder {
+    display: flex;
+    gap: 5rem;
+  }
+
   form {
-    width: 60%;
-    text-align: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
   }
 
   ul {
@@ -102,6 +117,7 @@ export const Button = styled(motion.button)`
   padding: 1rem;
   cursor: pointer;
   transition: all 0.3s ease-out;
+  align-self: flex-end;
 
   &:hover {
     transform: scale(0.999);

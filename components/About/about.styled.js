@@ -12,7 +12,7 @@ const Container = styled(motion.section)`
   background: linear-gradient(
     -65deg,
     ${(props) => props.theme.green} 0%,
-    ${(props) => props.theme.bg1} 15%,
+    ${(props) => props.theme.bg1} 10%,
     ${(props) => props.theme.bg} 85%,
     ${(props) => props.theme.gray} 100%
   );
@@ -56,6 +56,7 @@ const Container = styled(motion.section)`
     font-size: 2rem;
     letter-spacing: 2.5px;
     font-weight: 700;
+    margin-bottom: 0.5rem;
   }
 
   .border-bottom {

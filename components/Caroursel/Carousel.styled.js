@@ -11,6 +11,13 @@ const Container = styled(motion.section)`
   padding-top: 3rem;
   color: ${(props) => props.theme.primary};
   background-color: ${({ theme }) => theme.bg};
+  background: linear-gradient(
+    -65deg,
+    ${(props) => props.theme.green} 0%,
+    ${(props) => props.theme.bg1} 10%,
+    ${(props) => props.theme.bg} 85%,
+    ${(props) => props.theme.gray} 100%
+  );
 
   h2 {
     text-transform: uppercase;

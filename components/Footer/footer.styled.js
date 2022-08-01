@@ -11,6 +11,14 @@ const StyledFooter = styled(motion.footer)`
   padding: 0 5%;
   border-top: 0.5px solid ${(props) => props.theme.tertiary};
 
+  background: linear-gradient(
+    -35deg,
+    ${(props) => props.theme.green} 0%,
+    ${(props) => props.theme.bg1} 10%,
+    ${(props) => props.theme.bg} 82.5%,
+    ${(props) => props.theme.gray} 100%
+  );
+
   .icon-list {
     display: flex;
     gap: 0.2rem;

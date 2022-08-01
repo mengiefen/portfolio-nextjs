@@ -8,6 +8,13 @@ const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(
+    65deg,
+    ${(props) => props.theme.gray} 0%,
+    ${(props) => props.theme.bg} 15%,
+    ${(props) => props.theme.bg1} 90%,
+    ${(props) => props.theme.green} 100%
+  );
 
   .skill-title {
     text-transform: uppercase;
@@ -23,7 +30,7 @@ const Container = styled(motion.section)`
     width: 80px;
     margin-bottom: 2rem;
     border-bottom: 4px solid ${({ theme }) => theme.tertiary};
-    margin-left: 6.5%;
+    margin-left: 5%;
     align-self: start;
   }
 
@@ -151,10 +158,17 @@ const Container = styled(motion.section)`
       align-items: center;
     }
 
+    h3 {
+      color: ${({ theme }) => theme.primary};
+      letter-spacing: 1.2px;
+      font-size: 1.2rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
     .skill-desc {
       text-align: center;
       color: ${({ theme }) => theme.primary};
-      padding: 1.5rem 0;
     }
   }
 `;

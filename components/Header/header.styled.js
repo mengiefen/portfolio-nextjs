@@ -14,11 +14,11 @@ const Header = styled(motion.header)`
   justify-content: center;
   z-index: 1111;
   background: linear-gradient(
-    45deg,
-    ${(props) => props.theme.gray} 0%,
-    ${(props) => props.theme.bg1} 15%,
-    ${(props) => props.theme.bg} 85%,
-    ${(props) => props.theme.green} 100%
+    -65deg,
+    ${(props) => props.theme.green} 0%,
+    ${(props) => props.theme.bg1} 10%,
+    ${(props) => props.theme.bg} 95%,
+    ${(props) => props.theme.gray} 100%
   );
 
   .header {

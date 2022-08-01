@@ -84,13 +84,13 @@ const Container = styled(motion.div)`
 
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
-    left: 10px;
+    left: 0;
     right: auto;
   }
 
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
-    right: 10px;
+    right: 0;
     left: auto;
   }
 

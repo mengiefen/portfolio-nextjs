@@ -18,6 +18,7 @@ const ProfessionalSkills = () => {
               style={{ color: 'red' }}
             ></Image>
           </div>
+          <h3>{skill.title}</h3>
           <p className="skill-desc">{skill.desc}</p>
         </div>
       ))}
