@@ -15,7 +15,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import './styles.css';
-
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination, Autoplay } from "swiper";
 

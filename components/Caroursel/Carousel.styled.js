@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   display: flex;
@@ -8,6 +8,7 @@ const Container = styled(motion.section)`
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  padding-top: 3rem;
   color: ${(props) => props.theme.primary};
   background-color: ${({ theme }) => theme.bg};
 

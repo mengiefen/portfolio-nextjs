@@ -6,59 +6,154 @@ const Container = styled(motion.section)`
   height: 100vh;
   background-color: ${(props) => props.theme.bg};
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  .skill-title {
+    text-transform: uppercase;
+    padding-left: 5%;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    align-self: flex-start;
+    color: ${({ theme }) => theme.primary};
+  }
+
+  .border-bottom {
+    width: 80px;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid ${({ theme }) => theme.tertiary};
+    margin-left: 6.5%;
+    align-self: start;
+  }
 
   .skill-list {
-    padding: 5% 2%;
-    width: 70%;
-    height: 70%;
+    position: relative;
+    padding: 1rem;
+    width: 80%;
+    height: 80%;
     background-color: ${({ theme }) => theme.bg};
     color: ${(props) => props.theme.bg};
     border-radius: 1rem;
-    display: flex;
-    align-items: center;
     position: relative;
     box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};
     animation: infinite;
-
-    .skill-title {
-      width: 40%;
-      height: 12%;
-      background-color: ${(props) => props.theme.gray};
-      color: ${(props) => props.theme.bg};
-      position: absolute;
-      top: -5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 3rem;
-      border-radius: 40px;
-      box-shadow: 0 4px 8px 0 ${(props) => props.theme.gray};
-    }
+    overflow: hidden;
   }
 
   .languages {
+    position: absolute;
+    bottom: 0.5rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     width: 100%;
+    /* animation: slideshowleft 40s linear infinite; */
   }
 
   .icon-holder {
-    border-radius: 30%;
-    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    top: 100%;
+    padding: 0.5rem;
     overflow: hidden;
     transition: all 0.5s;
-    box-shadow: 0 2px 8px 0 ${(props) => props.theme.gray};
+    box-shadow: 0 0 4px 0 ${(props) => props.theme.gray};
 
     :hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};
+      box-shadow: 0 0 8px 0 ${(props) => props.theme.gray};
+    }
+  }
+
+  .languages-1 {
+    position: absolute;
+    top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    animation: slideshowright 20s linear infinite;
+  }
+
+  .icon-holder-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    top: 100%;
+    padding: 0.35rem;
+    overflow: hidden;
+    transition: all 0.5s;
+    box-shadow: 0 0px 4px 0 ${(props) => props.theme.gray};
+
+    :hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 8px 0 ${(props) => props.theme.gray};
+    }
+
+    @keyframes slideshowleft {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+
+    @keyframes slideshowright {
+      0% {
+        left: -110%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  }
+
+  .prof-skill-set {
+    width: 90%;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 4rem auto;
+    justify-items: center;
+    gap: 0.75rem;
+
+    .prof-skills {
+      display: flex;
+      min-width: 35%;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5px;
+      padding: 0.5rem;
+      box-shadow: 0 0 4px ${({ theme }) => theme.gray};
+      transition: all 0.5s ease-in-out;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.01);
+        box-shadow: 0 0 4px ${({ theme }) => theme.tertiary};
+      }
+    }
+
+    .skill-icon-holder {
+      border-radius: 50%;
+      /* border: 0.25px solid ${({ theme }) => theme.gray}; */
+      box-shadow: 0 0 4px ${({ theme }) => theme.gray};
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .skill-desc {
+      text-align: center;
+      color: ${({ theme }) => theme.primary};
     }
   }
 `;
