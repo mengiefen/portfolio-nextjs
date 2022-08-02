@@ -1,15 +1,18 @@
-import Image from "next/image";
-import { ButtonOutline } from "../Buttons/buttons.styled";
-import Layout from "../Layout/layout";
-import Container from "./front-page.styled";
-import bgImg from "../../public/picture.png";
-import SocialMedia from "../SocialMedia/SocialMedia";
-import Typed from "react-typed";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "../../data/particlesConfig.json";
+import Image from 'next/image';
+import { ButtonOutline } from '../Buttons/buttons.styled';
+import Layout from '../Layout/layout';
+import Container from './front-page.styled';
+import bgImg from '../../public/picture.png';
+import SocialMedia from '../SocialMedia/SocialMedia';
+import Typed from 'react-typed';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import particlesConfig from '../../data/particlesConfig.json';
+import Message from '../FlashMessages/Messages';
 
 const FrontPage = () => {
+  const message =
+    "Pleas note that this portfolio website under construction. I'm working on diffrent features like making the app responsive.";
   const particlesInit = async (main) => {
     console.log(main);
 
@@ -23,7 +26,8 @@ const FrontPage = () => {
   return (
     <Layout>
       <Container id="home" whileInView={{ opacity: 0.999 }}>
-        <div style={{ zIndex: "-1" }}>
+        <Message message={message} />
+        <div style={{ zIndex: '-1' }}>
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -40,7 +44,7 @@ const FrontPage = () => {
           </h1>
           <h2 className="sub-heading">
             <Typed
-              strings={["Frontend", "Backend", "Fullstack"]}
+              strings={['Frontend', 'Backend', 'Fullstack']}
               typeSpeed={80}
               backSpeed={80}
               backDelay={1000}
