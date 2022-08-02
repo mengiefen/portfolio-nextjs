@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   display: flex;
@@ -15,14 +15,40 @@ const Container = styled(motion.section)`
     ${(props) => props.theme.green} 100%
   );
 
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    height: auto;
+    min-height: 60vh;
+    align-items: start;
+    position: relative;
+    justify-content: center;
+  }
+
+  @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+    height: 100vh;
+  }
+
   .text-area {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 60%;
     padding: 0 3%;
-    margin-left: 2rem;
     padding-top: 10rem;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      margin-top: 2rem;
+      max-width: 70%;
+      padding-top: 5rem;
+      align-items: start;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      flex-direction: column;
+      flex: 2;
+      max-width: 70%;
+      padding-top: 5rem;
+      align-items: center;
+    }
   }
 
   .heading {
@@ -32,16 +58,25 @@ const Container = styled(motion.section)`
     line-height: 0;
     letter-spacing: 4px;
     font-weight: bold;
-    font-family: 'Bebas Neue', cursive;
-    font-family: 'Edu TAS Beginner', cursive;
+    font-family: "Bebas Neue", cursive;
+    font-family: "Edu TAS Beginner", cursive;
     /* font-family: 'Arbutus', cursive; */
     /* font-family: 'Bebas Neue', cursive; */
     /* font-family: 'Edu TAS Beginner', cursive; */
     /* font-family: 'Margarine', cursive; */
     /* font-family: 'Nova Oval', cursive; */
     /* font-family: 'Pacifico', cursive; */
-    font-family: 'Yatra One', cursive;
-    font-family: 'Zen Dots', cursive;
+    font-family: "Yatra One", cursive;
+    font-family: "Zen Dots", cursive;
+
+    @media (max-width: ${({ theme }) => theme.device.laptop}) {
+      font-size: min(2.75vw, 1.5rem);
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      padding-left: 1rem;
+      text-align: center;
+    }
   }
 
   .sub-heading {
@@ -50,9 +85,13 @@ const Container = styled(motion.section)`
     padding-left: 2rem;
     text-align: center;
     color: ${(props) => props.theme.primary};
-    font-family: 'Bebas Neue', cursive;
-    font-family: 'Edu TAS Beginner', cursive;
-    font-family: 'Zen Dots', cursive;
+    font-family: "Bebas Neue", cursive;
+    font-family: "Edu TAS Beginner", cursive;
+    font-family: "Zen Dots", cursive;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      padding-left: 1rem;
+    }
 
     span {
       color: ${(props) => props.theme.secondary};
@@ -65,6 +104,11 @@ const Container = styled(motion.section)`
     color: ${(props) => props.theme.primary};
     padding-left: 2rem;
     padding-bottom: 2rem;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      padding-left: 1rem;
+      text-align: center;
+    }
   }
 
   figure {
@@ -73,11 +117,38 @@ const Container = styled(motion.section)`
     position: relative;
     display: flex;
     align-items: flex-end;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      position: absolute;
+      height: auto;
+      bottom: 0;
+      right: -10%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      position: absolute;
+      height: auto;
+      bottom: 30%;
+      right: -20%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileS}) {
+      height: auto;
+      position: absolute;
+      bottom: 20%;
+      right: -10%;
+    }
   }
 
   .img {
     clip-path: polygon(50% 100%, 100% 38%, 75% 0, 25% 0, 0% 38%);
-    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.5 : 0.2)};
+    opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.5 : 0.2)};
+
+    @media (max-width: ${({ theme }) => theme.device.mobileS}) {
+      width: 100%;
+      height: auto;
+      opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0 : 0.2)};
+    }
   }
 
   .overlay {
@@ -88,8 +159,12 @@ const Container = styled(motion.section)`
     width: 100%;
     height: 100%;
     /* background-color: ${(props) => props.theme.bg}; */
-    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.3 : 0.9)};
+    opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.3 : 0.9)};
     z-index: 10;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.75 : 0.9)};
+    }
   }
 `;
 

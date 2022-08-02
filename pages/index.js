@@ -1,11 +1,10 @@
-import Head from 'next/head';
-import About from '../components/About/about';
-import Contact from '../components/Contact/contact';
-import FrontPage from '../components/FrontPage/front-page';
-import Portfolio from '../components/Portfolio/portfolio';
-import Skills from '../components/Skills/skills';
-import Footer from '../components/Footer/footer';
-import Animation from '../components/FrontPage/Animation';
+import Head from "next/head";
+import About from "../components/About/about";
+import Contact from "../components/Contact/contact";
+import FrontPage from "../components/FrontPage/front-page";
+import Portfolio from "../components/Portfolio/portfolio";
+import Skills from "../components/Skills/skills";
+import Footer from "../components/Footer/footer";
 
 const Home = () => {
   return (
@@ -20,7 +19,6 @@ const Home = () => {
       <Portfolio />
       <Contact />
       <Footer />
-      <Animation />
     </main>
   );
 };

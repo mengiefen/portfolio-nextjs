@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -17,12 +17,16 @@ body{
   /* font-family: 'Bebas Neue', cursive;
   font-family: 'Montserrat', sans-serif; */
 
-font-family: 'Bebas Neue', cursive;
-font-family: 'Edu TAS Beginner', cursive;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Edu TAS Beginner', cursive;
 
-font-family: 'Pacifico', cursive;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-family: 'Open Sans', sans-serif;
   position: relative;
+
+   @media (max-width:768px) {
+    width: 100vw;
+  } 
 }
 
 .scroll-to-home {
@@ -109,24 +113,24 @@ font-family: 'Open Sans', sans-serif;
 // };
 
 export const darkTheme = {
-  primary: '#F4FFFDFF',
-  secondary: '#F9DC5CFF',
-  tertiary: '#ED254EFF',
-  bg: '#011936FF',
-  bg1: '#011329',
-  gray: '#777',
-  green: '#1FB57B',
-  yellow: '#FAD9A1',
-  red: '#F37878',
+  primary: "#F4FFFDFF",
+  secondary: "#F9DC5CFF",
+  tertiary: "#ED254EFF",
+  bg: "#011936FF",
+  bg1: "#011329",
+  gray: "#777",
+  green: "#1FB57B",
+  yellow: "#FAD9A1",
+  red: "#F37878",
 
   device: {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px',
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px",
   },
 };
 
@@ -147,24 +151,24 @@ export const darkTheme = {
 // };
 
 export const lightTheme = {
-  primary: '#2d3142',
-  secondary: '#F36B6B',
-  tertiary: '#5DAE8B',
-  bg: '#fafafa',
-  bg1: '#F0F0F0',
-  gray: '#bfc0c0',
-  green: '#1FB57B',
-  yellow: '#FAD9A1',
-  red: '#F37878',
+  primary: "#2d3142",
+  secondary: "#F36B6B",
+  tertiary: "#5DAE8B",
+  bg: "#fafafa",
+  bg1: "#F0F0F0",
+  gray: "#b0b0b0",
+  green: "#1FB57B",
+  yellow: "#FAD9A1",
+  red: "#F37878",
 
   device: {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px',
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px",
   },
 };
 

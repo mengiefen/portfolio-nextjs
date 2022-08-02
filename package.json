@@ -19,10 +19,12 @@
     "react-is": "^18.0.0",
     "react-particles": "^2.1.4",
     "react-slick": "^0.29.0",
+    "react-tsparticles": "^2.1.4",
     "react-typed": "^1.2.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "tsparticles": "^2.1.4"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.7",
