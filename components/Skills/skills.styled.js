@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -15,6 +15,10 @@ const Container = styled(motion.section)`
     ${(props) => props.theme.bg1} 90%,
     ${(props) => props.theme.green} 100%
   );
+
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    height: auto;
+  }
 
   .skill-title {
     text-transform: uppercase;
@@ -46,6 +50,12 @@ const Container = styled(motion.section)`
     box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};
     animation: infinite;
     overflow: hidden;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: 90%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
   }
 
   .languages {
@@ -131,6 +141,17 @@ const Container = styled(motion.section)`
     justify-items: center;
     gap: 0.75rem;
 
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      grid-template-columns: 1fr 1fr;
+      margin: 3rem auto;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      grid-template-columns: 1fr;
+      margin: 3rem auto;
+      gap: 3rem;
+    }
+
     .prof-skills {
       display: flex;
       min-width: 35%;
@@ -145,6 +166,17 @@ const Container = styled(motion.section)`
       &:focus {
         transform: scale(1.01);
         box-shadow: 0 0 4px ${({ theme }) => theme.tertiary};
+
+        @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+          transform: scale(1);
+          align-items: start;
+        }
+      }
+
+      @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+        flex-direction: row;
+        width: 100%;
+        position: relative;
       }
     }
 
@@ -156,6 +188,13 @@ const Container = styled(motion.section)`
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+        flex: 1;
+        padding: 0.75rem 0.5rem;
+        width: auto;
+        margin-right: 1rem;
+      }
     }
 
     h3 {
@@ -164,11 +203,22 @@ const Container = styled(motion.section)`
       font-size: 1.2rem;
       text-align: center;
       text-transform: capitalize;
+
+      @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+        flex: 1;
+        position: absolute;
+        top: -3.5rem;
+        left: 0;
+      }
     }
 
     .skill-desc {
       text-align: center;
       color: ${({ theme }) => theme.primary};
+
+      @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+        flex: 3;
+      }
     }
   }
 `;
