@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Header = styled(motion.header)`
   position: absolute;
@@ -20,6 +20,10 @@ const Header = styled(motion.header)`
     ${(props) => props.theme.bg} 95%,
     ${(props) => props.theme.gray} 100%
   );
+
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    width: 100vw;
+  }
 
   .header {
     display: flex;

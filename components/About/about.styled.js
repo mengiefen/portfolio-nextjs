@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   width: 100%;
-  height: 100vh;
+  min-height: 80vh;
   background-color: ${(props) => props.theme.bg1};
   display: flex;
   align-items: center;
@@ -17,10 +17,21 @@ const Container = styled(motion.section)`
     ${(props) => props.theme.gray} 100%
   );
 
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    padding-bottom: 2rem;
+    min-height: 60vh;
+  }
+
   .content {
     display: flex;
     justify-content: center;
+
     width: 90%;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .img {
@@ -35,15 +46,23 @@ const Container = styled(motion.section)`
     &:hover {
       filter: grayscale(0);
     }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: auto;
+      display: none;
+    }
   }
 
   .desc {
     display: flex;
     flex-direction: column;
     color: ${(props) => props.theme.primary};
-    line-height: 2;
     flex: 2;
     align-items: center;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      line-height: 1.75;
+    }
 
     .general-desc {
       text-align: justify;

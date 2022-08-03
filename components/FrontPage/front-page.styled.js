@@ -18,9 +18,11 @@ const Container = styled(motion.section)`
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     height: auto;
     min-height: 60vh;
+    width: 100vw;
     align-items: start;
     position: relative;
     justify-content: center;
+    padding-bottom: 2rem;
   }
 
   @media (max-width: ${({ theme }) => theme.device.mobileL}) {
@@ -45,9 +47,10 @@ const Container = styled(motion.section)`
     @media (max-width: ${({ theme }) => theme.device.mobileL}) {
       flex-direction: column;
       flex: 2;
-      max-width: 70%;
+      max-width: 85%;
       padding-top: 5rem;
       align-items: center;
+      padding: 5rem 1% 0 3%;
     }
   }
 
@@ -107,7 +110,7 @@ const Container = styled(motion.section)`
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       padding-left: 1rem;
-      text-align: center;
+      text-align: left;
     }
   }
 

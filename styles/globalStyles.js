@@ -7,11 +7,11 @@ html{
   margin: 0 auto;
   padding: 0;
   background-color: #afafaf;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 
 body{
-  height:96vh;
+  min-height:96vh;
   width: 94vw;  
   margin: 0 auto;
   /* font-family: 'Bebas Neue', cursive;
@@ -22,11 +22,12 @@ body{
 
   font-family: 'Pacifico', cursive;
   font-family: 'Open Sans', sans-serif;
-  position: relative;
-
-   @media (max-width:768px) {
-    width: 100vw;
-  } 
+  position: relative;  
+    
+  @media (max-width:768px) { 
+      width: 100vw;
+      margin: 0;   
+    }   
 }
 
 .scroll-to-home {
@@ -48,7 +49,8 @@ body{
 
   :hover {
     transform: scale(1.05);
-  }
+  } 
+  
 }
 
 .theme-switcher {  
@@ -62,6 +64,12 @@ body{
     transition: all 0.3s ease-out;
     cursor: pointer;
     z-index: 11111;
+
+    @media (max-width:768px) { 
+      /* position: absolute; */
+      top: 25%;
+      right: 0.2rem;
+    } 
   }
 
  
@@ -69,11 +77,18 @@ body{
   {
     color: #fafafa;
     font-size: 1.5rem;
+
+    @media (max-width:768px) {    
+      font-size: 1rem;
+    } 
   }  
 
   .dark-icon {
       color: #fafafa;
       font-size: 1.5rem;
+    @media (max-width:768px) {    
+      font-size: 1rem;
+    } 
   }  
 
 .switch {
@@ -88,6 +103,12 @@ body{
   cursor: pointer; 
   border: 2px solid #fafafa;
   z-index: 22222;
+
+  @media (max-width:768px) {    
+      width: 30px;
+      height: 10px;
+      padding: 5px;
+    } 
 }
 
 .switch[data-ison="true"] {
@@ -102,6 +123,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width:768px) {    
+    width: 20px;
+    height: 20px;
+  } 
 }
 `;
 

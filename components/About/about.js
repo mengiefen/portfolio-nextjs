@@ -18,8 +18,8 @@ const About = () => {
         >
           <Image
             src={bgImg}
-            width={500}
-            height={500}
+            width={250}
+            height={250}
             alt="picture of me"
             className="img"
           />
