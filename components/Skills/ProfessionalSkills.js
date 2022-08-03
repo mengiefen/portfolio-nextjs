@@ -15,7 +15,6 @@ const ProfessionalSkills = () => {
               width={50}
               height={50}
               alt={skill.alt}
-              style={{ color: 'red' }}
             ></Image>
           </div>
           <h3>{skill.title}</h3>

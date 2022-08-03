@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Container from "./about.styled";
-import bgImg from "../../public/picture.png";
-import { motion } from "framer-motion";
+import Image from 'next/image';
+import Container from './about.styled';
+import bgImg from '../../public/picture.png';
+import { motion } from 'framer-motion';
 
-import Button from "../Buttons/buttons";
-import { FaChevronRight } from "react-icons/fa";
+import Button from '../Buttons/buttons';
+import { FaChevronRight } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -14,7 +14,7 @@ const About = () => {
           className="img"
           initial={{ scale: 0.5 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 1 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
         >
           <Image
             src={bgImg}
@@ -26,9 +26,9 @@ const About = () => {
         </motion.figure>
         <motion.aside
           className="desc"
-          initial={{ x: -20 }}
+          initial={{ x: -100 }}
           whileInView={{ x: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
         >
           <h2 className="title">About Me</h2>
           <div className="border-bottom"></div>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -18,7 +18,7 @@ const Container = styled(motion.section)`
   );
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     min-height: 60vh;
   }
 

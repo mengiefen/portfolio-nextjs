@@ -31,8 +31,8 @@ const Skills = () => {
             <div className="icon-holder-1" key={logo.id}>
               <Image
                 src={logo.img}
-                width={20}
-                height={20}
+                width={64}
+                height={64}
                 alt={logo.alt}
               ></Image>
             </div>

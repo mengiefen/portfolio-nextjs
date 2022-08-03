@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -18,6 +18,7 @@ const Container = styled(motion.section)`
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     height: auto;
+    padding-bottom: 2rem;
   }
 
   .skill-title {
@@ -36,6 +37,10 @@ const Container = styled(motion.section)`
     border-bottom: 4px solid ${({ theme }) => theme.tertiary};
     margin-left: 5%;
     align-self: start;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      margin-bottom: 1rem;
+    }
   }
 
   .skill-list {
@@ -52,9 +57,11 @@ const Container = styled(motion.section)`
     overflow: hidden;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      background-color: transparent;
       width: 90%;
       height: auto;
       border-radius: 0.5rem;
+      box-shadow: none;
     }
   }
 
@@ -67,6 +74,11 @@ const Container = styled(motion.section)`
     gap: 1rem;
     width: 100%;
     /* animation: slideshowleft 40s linear infinite; */
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: 150%;
+      animation: slideshowright 40s linear infinite;
+    }
   }
 
   .icon-holder {
@@ -81,8 +93,16 @@ const Container = styled(motion.section)`
     box-shadow: 0 0 4px 0 ${(props) => props.theme.gray};
 
     :hover {
-      transform: scale(1.05);
       box-shadow: 0 0 8px 0 ${(props) => props.theme.gray};
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      padding: 2px;
+    }
+
+    img {
+      width: 200%;
+      height: 200%;
     }
   }
 
@@ -92,9 +112,17 @@ const Container = styled(motion.section)`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     animation: slideshowright 20s linear infinite;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: 150%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      display: none;
+    }
   }
 
   .icon-holder-1 {
@@ -109,7 +137,7 @@ const Container = styled(motion.section)`
     box-shadow: 0 0px 4px 0 ${(props) => props.theme.gray};
 
     :hover {
-      transform: scale(1.05);
+      transform: scale(1.005);
       box-shadow: 0 0 8px 0 ${(props) => props.theme.gray};
     }
 
@@ -164,7 +192,7 @@ const Container = styled(motion.section)`
 
       &:hover,
       &:focus {
-        transform: scale(1.01);
+        transform: scale(1.005);
         box-shadow: 0 0 4px ${({ theme }) => theme.tertiary};
 
         @media (max-width: ${({ theme }) => theme.device.mobileL}) {
@@ -190,10 +218,16 @@ const Container = styled(motion.section)`
       align-items: center;
 
       @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+        border-radius: none;
         flex: 1;
-        padding: 0.75rem 0.5rem;
+        padding: 0.8rem 0;
         width: auto;
         margin-right: 1rem;
+      }
+
+      img {
+        width: 75%;
+        height: 75%;
       }
     }
 
