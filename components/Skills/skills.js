@@ -18,8 +18,8 @@ const Skills = () => {
             <div className="icon-holder" key={logo.id}>
               <Image
                 src={logo.img}
-                width={25}
-                height={25}
+                width={64}
+                height={64}
                 alt={logo.alt}
               ></Image>
             </div>
@@ -32,7 +32,7 @@ const Skills = () => {
               <Image
                 src={logo.img}
                 width={64}
-                height={64}
+                height={54}
                 alt={logo.alt}
               ></Image>
             </div>

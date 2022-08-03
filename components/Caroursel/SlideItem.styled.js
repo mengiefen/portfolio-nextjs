@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.div)`
   display: flex;
@@ -17,6 +17,16 @@ const Container = styled(motion.div)`
   padding: 1rem 0;
   transition: all 0.3s ease-in-out;
 
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    max-width: 70%;
+    padding: 2rem 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+    max-width: 80%;
+    padding: 1rem 0;
+  }
+
   .border-decor {
     position: absolute;
     bottom: 0;
@@ -24,7 +34,6 @@ const Container = styled(motion.div)`
     width: 100%;
     height: 0.5rem;
   }
-
   /* Media Query to vary the size of the slide item */
 
   &:hover {
@@ -54,20 +63,38 @@ const Container = styled(motion.div)`
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 1.5px;
-    /* color: ${({ theme }) => theme.tertiary}; */
-    width: 100%;
+    width: 65%;
     padding: 0.3rem 0;
     text-align: center;
-    /* background-color: ${({ theme }) => theme.yellow}; */
-    transform: rotate(-35deg) translateX(-32%) translateY(-70px);
+    transform: rotate(-35deg) translateX(-25%) translateY(-25px);
     z-index: 1111;
-    font-family: "Edu TAS Beginner", cursive;
+    font-family: 'Edu TAS Beginner', cursive;
+
+    @media (max-width: ${({ theme }) => theme.device.laptopL}) {
+      width: 75%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.laptop}) {
+      width: 70%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: 65%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      width: 85%;
+    }
   }
 
   .desc {
     max-width: 90%;
     font-size: 0.8rem;
     color: ${({ theme }) => theme.primary};
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      width: 95%;
+    }
   }
 
   .image-holder {
@@ -79,6 +106,10 @@ const Container = styled(motion.div)`
   .project-links {
     display: flex;
     gap: 2rem;
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      gap: 1rem;
+    }
   }
 
   .project-link {
@@ -108,6 +139,10 @@ const Container = styled(motion.div)`
     gap: 1rem;
     font-size: 0.8rem;
     color: ${({ theme }) => theme.primary};
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      gap: 0.5rem;
+    }
   }
 
   .project-tech span {

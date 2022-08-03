@@ -31,15 +31,27 @@ const Container = styled(motion.div)`
 
   .arrow-left {
     left: 2rem;
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      left: 0;
+    }
   }
 
   .arrow-right {
     right: 2rem;
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      left: 0;
+    }
   }
 
   .swiper {
     width: 90%;
     height: 620px;
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      width: 95%;
+      height: auto;
+    }
   }
 
   .swiper-slide {

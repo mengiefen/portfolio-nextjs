@@ -19,6 +19,10 @@ const Container = styled(motion.section)`
     ${(props) => props.theme.gray} 100%
   );
 
+  @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    padding-top: 1rem;
+  }
+
   h2 {
     text-transform: uppercase;
     font-size: 2rem;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 html{
@@ -64,6 +64,8 @@ body{
     transition: all 0.3s ease-out;
     cursor: pointer;
     z-index: 11111;
+    outline: none;
+    border: none;
 
     @media (max-width:768px) { 
       /* position: absolute; */
@@ -98,7 +100,7 @@ body{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 25px;
   padding: 10px;
   cursor: pointer; 
   border: 2px solid #fafafa;
@@ -139,24 +141,24 @@ body{
 // };
 
 export const darkTheme = {
-  primary: "#F4FFFDFF",
-  secondary: "#F9DC5CFF",
-  tertiary: "#ED254EFF",
-  bg: "#011936FF",
-  bg1: "#011329",
-  gray: "#777",
-  green: "#1FB57B",
-  yellow: "#FAD9A1",
-  red: "#F37878",
+  primary: '#F4FFFDFF',
+  secondary: '#F9DC5CFF',
+  tertiary: '#ED254EFF',
+  bg: '#011936FF',
+  bg1: '#011329',
+  gray: '#777',
+  green: '#1FB57B',
+  yellow: '#FAD9A1',
+  red: '#F37878',
 
   device: {
-    mobileS: "320px",
-    mobileM: "375px",
-    mobileL: "425px",
-    tablet: "768px",
-    laptop: "1024px",
-    laptopL: "1440px",
-    desktop: "2560px",
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
   },
 };
 
@@ -177,24 +179,24 @@ export const darkTheme = {
 // };
 
 export const lightTheme = {
-  primary: "#2d3142",
-  secondary: "#F36B6B",
-  tertiary: "#5DAE8B",
-  bg: "#fafafa",
-  bg1: "#F0F0F0",
-  gray: "#b0b0b0",
-  green: "#1FB57B",
-  yellow: "#FAD9A1",
-  red: "#F37878",
+  primary: '#2d3142',
+  secondary: '#F36B6B',
+  tertiary: '#5DAE8B',
+  bg: '#fafafa',
+  bg1: '#F0F0F0',
+  gray: '#b0b0b0',
+  green: '#1FB57B',
+  yellow: '#FAD9A1',
+  red: '#F37878',
 
   device: {
-    mobileS: "320px",
-    mobileM: "375px",
-    mobileL: "425px",
-    tablet: "768px",
-    laptop: "1024px",
-    laptopL: "1440px",
-    desktop: "2560px",
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
   },
 };
 

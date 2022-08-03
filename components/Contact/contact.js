@@ -1,24 +1,24 @@
-import Container, { Button } from "./contact.styled";
-import { useRef, useState } from "react";
-import Image from "next/image";
-import emailjs from "@emailjs/browser";
-import INBOX from "../../public/inbox.svg";
-import ENVELOPE from "../../public/envelope.svg";
-import { motion } from "framer-motion";
-import FlashMessage from "../FlashMessages/FlashMessage";
+import Container, { Button } from './contact.styled';
+import { useRef, useState } from 'react';
+import Image from 'next/image';
+import emailjs from '@emailjs/browser';
+import INBOX from '../../public/inbox.svg';
+import ENVELOPE from '../../public/envelope.svg';
+import { motion } from 'framer-motion';
+import FlashMessage from '../FlashMessages/FlashMessage';
 
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const [flash, setFlash] = useState({
-    type: "",
+    type: '',
     show: false,
-    message: "Your message is successfully sent! I will get back to you soon.",
+    message: 'Your message is successfully sent! I will get back to you soon.',
     duration: 10000,
   });
 
@@ -33,25 +33,25 @@ const Contact = () => {
       (result) => {
         setFlash({
           ...flash,
-          type: "success",
+          type: 'success',
           show: true,
           message:
-            "Your message is succesfully delivered. I will reach out to your ",
+            'Your message is succesfully delivered. I will reach out to your ',
         });
         setFormData({
-          name: "",
-          email: "",
-          message: "",
+          name: '',
+          email: '',
+          message: '',
         });
       },
       (error) => {
         setFlash({
           ...flash,
-          type: "alert",
+          type: 'alert',
           show: true,
-          message: "Your message was not sent.",
+          message: 'Your message was not sent.',
         });
-      }
+      },
     );
   };
 
@@ -126,7 +126,8 @@ const Contact = () => {
         <motion.div
           initial={{ scale: 0.5, x: 100 }}
           whileInView={{ scale: 0.75, x: 0 }}
-          transition={{ ease: "easeOut", duration: 1 }}
+          transition={{ ease: 'easeOut', duration: 1 }}
+          className="contact-image"
         >
           <Image src={ENVELOPE} width={300} height={300} alt="picture of me" />
         </motion.div>

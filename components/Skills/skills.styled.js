@@ -15,9 +15,15 @@ const Container = styled(motion.section)`
     ${(props) => props.theme.bg1} 90%,
     ${(props) => props.theme.green} 100%
   );
+  padding: 3rem auto;
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     height: auto;
+    min-height: 70vh;
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.device.mobileL}) {
     padding-bottom: 2rem;
   }
 
@@ -71,13 +77,27 @@ const Container = styled(motion.section)`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 100%;
-    /* animation: slideshowleft 40s linear infinite; */
+    gap: 0.5rem;
+    width: 80%;
+    animation: slideshowleft 40s linear infinite;
 
+    @media (max-width: ${({ theme }) => theme.device.lapropL}) {
+      width: 85%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.laprop}) {
+      width: 90%;
+    }
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: 100%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      width: 110%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
       width: 150%;
-      animation: slideshowright 40s linear infinite;
     }
   }
 
@@ -96,13 +116,21 @@ const Container = styled(motion.section)`
       box-shadow: 0 0 8px 0 ${(props) => props.theme.gray};
     }
 
+    @media (max-width: ${({ theme }) => theme.device.laprop}) {
+      padding: 2px;
+    }
+
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       padding: 2px;
     }
 
     img {
-      width: 200%;
-      height: 200%;
+      width: 50%;
+      height: 50%;
+      @media (max-width: ${({ theme }) => theme.device.laptop}) {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -113,14 +141,18 @@ const Container = styled(motion.section)`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    width: 100%;
+    width: 80%;
     animation: slideshowright 20s linear infinite;
 
-    @media (max-width: ${({ theme }) => theme.device.tablet}) {
-      width: 150%;
+    @media (max-width: ${({ theme }) => theme.device.lapropL}) {
+      width: 85%;
     }
 
-    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+    @media (max-width: ${({ theme }) => theme.device.laprop}) {
+      width: 90%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
       display: none;
     }
   }
@@ -131,32 +163,39 @@ const Container = styled(motion.section)`
     justify-content: center;
     border-radius: 5px;
     top: 100%;
-    padding: 0.35rem;
+    padding: 0.5rem;
     overflow: hidden;
     transition: all 0.5s;
-    box-shadow: 0 0px 4px 0 ${(props) => props.theme.gray};
+    box-shadow: 0 0 4px 0 ${(props) => props.theme.gray};
 
     :hover {
-      transform: scale(1.005);
       box-shadow: 0 0 8px 0 ${(props) => props.theme.gray};
     }
 
-    @keyframes slideshowleft {
-      0% {
-        left: 100%;
-      }
-      100% {
-        left: -100%;
-      }
+    @media (max-width: ${({ theme }) => theme.device.laprop}) {
+      padding: 2px;
     }
 
-    @keyframes slideshowright {
-      0% {
-        left: -110%;
-      }
-      100% {
-        left: 100%;
-      }
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      padding: 2px;
+    }
+  }
+
+  @keyframes slideshowleft {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  @keyframes slideshowright {
+    0% {
+      left: -110%;
+    }
+    100% {
+      left: 100%;
     }
   }
 
@@ -169,9 +208,12 @@ const Container = styled(motion.section)`
     justify-items: center;
     gap: 0.75rem;
 
-    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+    @media (max-width: ${({ theme }) => theme.device.laptop}) {
       grid-template-columns: 1fr 1fr;
-      margin: 3rem auto;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      margin: 4rem auto;
     }
 
     @media (max-width: ${({ theme }) => theme.device.mobileL}) {
@@ -201,6 +243,11 @@ const Container = styled(motion.section)`
         }
       }
 
+      @media (max-width: ${({ theme }) => theme.device.tablet}) {
+        padding: 0.5rem;
+        border-radius: 3px;
+      }
+
       @media (max-width: ${({ theme }) => theme.device.mobileL}) {
         flex-direction: row;
         width: 100%;
@@ -210,7 +257,6 @@ const Container = styled(motion.section)`
 
     .skill-icon-holder {
       border-radius: 50%;
-      /* border: 0.25px solid ${({ theme }) => theme.gray}; */
       box-shadow: 0 0 4px ${({ theme }) => theme.gray};
       padding: 1rem;
       display: flex;
@@ -218,7 +264,7 @@ const Container = styled(motion.section)`
       align-items: center;
 
       @media (max-width: ${({ theme }) => theme.device.mobileL}) {
-        border-radius: none;
+        border-radius: 0;
         flex: 1;
         padding: 0.8rem 0;
         width: auto;
@@ -238,8 +284,11 @@ const Container = styled(motion.section)`
       text-align: center;
       text-transform: capitalize;
 
+      @media (max-width: ${({ theme }) => theme.device.tablet}) {
+        top: 1rem;
+      }
+
       @media (max-width: ${({ theme }) => theme.device.mobileL}) {
-        flex: 1;
         position: absolute;
         top: -3.5rem;
         left: 0;

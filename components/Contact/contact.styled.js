@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 90%;
-  height: 100vh;
+  min-height: 70vh;
   background-color: ${(props) => props.theme.bg};
   display: flex;
   flex-direction: column;
   align-items: start;
   color: ${(props) => props.theme.primary};
-  padding: 1rem 5%;
+  padding: 3rem 5%;
 
   background: linear-gradient(
     65deg,
@@ -43,27 +43,70 @@ const Container = styled(motion.section)`
       width: 80%;
       margin-bottom: 1rem;
       align-self: left;
+
+      @media (max-width: ${({ theme }) => theme.device.tablet}) {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 
   .form-holder {
     display: flex;
     gap: 5rem;
+
+    @media (max-width: ${({ theme }) => theme.device.laptop}) {
+      gap: 2rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      gap: 1rem;
+    }
+
+    .contact-image {
+      display: block;
+      @media (max-width: ${({ theme }) => theme.device.tablet}) {
+        display: none;
+      }
+    }
   }
 
   form {
     width: 50%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: ${({ theme }) => theme.device.laptop}) {
+      width: 60%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      width: 80%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileL}) {
+      width: 95%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.device.mobileS}) {
+      width: 100%;
+    }
   }
 
   ul {
     list-style: none;
     margin-bottom: 2rem;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   li {
     margin-bottom: 1rem;
+
+    @media (max-width: ${({ theme }) => theme.device.tablet}) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   input {
