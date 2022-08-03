@@ -5,7 +5,6 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { FiAlertOctagon } from "react-icons/fi";
 import FlashMessage from "./Message.styled";
 
-
 const Message = (props) => {
   const { duration, icon, message, title, type, color, position } = props;
 
@@ -16,20 +15,19 @@ const Message = (props) => {
   //   setShowMessage(false);
   // });
 
-  (duration / 1000) *
-    useEffect(() => {
-      if (progress === 0) {
-        setShowMessage(false);
-      }
-      const timer =
-        progress > 0 &&
-        setInterval(() => setProgress(Math.floor(progress - 1)), 1000);
-      if (progress < 0) {
-        setShowMessage(false);
-      }
+  useEffect(() => {
+    if (progress === 0) {
+      setShowMessage(false);
+    }
+    const timer =
+      progress > 0 &&
+      setInterval(() => setProgress(Math.floor(progress - 1)), 1000);
+    if (progress < 0) {
+      setShowMessage(false);
+    }
 
-      return () => clearInterval(timer);
-    }, [progress]);
+    return () => clearInterval(timer);
+  }, [progress]);
 
   return (
     showMessage && (
@@ -72,7 +70,7 @@ const Message = (props) => {
             ease: "easeInOut",
           }}
           className="progress-bar"
-        />      
+        />
       </FlashMessage>
     )
   );

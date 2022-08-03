@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   width: 90%;
@@ -79,11 +79,21 @@ const Container = styled(motion.section)`
     transition: all 0.2s ease-in;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       background-color: ${({ theme }) => theme.bg};
       border: 0.5px solid ${({ theme }) => theme.green};
       box-shadow: 0 0 5px ${({ theme }) => theme.green};
     }
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-text-fill-color: ${({ theme }) => theme.primary} !important;
+    box-shadow: 0 0 5px ${({ theme }) => theme.green};
+    -webkit-box-shadow: 0 0 0 30px ${({ theme }) => theme.bg} inset !important;
   }
 
   textarea {

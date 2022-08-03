@@ -10,23 +10,18 @@ import { loadFull } from "tsparticles";
 import particlesConfig from "../../data/particlesConfig.json";
 import Message from "../FlashMessages/Messages";
 import { constraintsRef } from "../FlashMessages/Messages";
+import FlashMessage from "../FlashMessages/FlashMessage";
 const FrontPage = () => {
   const message =
-    "Pleas note that this portfolio website under construction. I'm working on diffrent features like making the app responsive.";
+    "Please note that this portfolio website is under construction. I'm working on diffrent features like making the app responsive.";
   const particlesInit = async (main) => {
-    console.log(main);
-
     await loadFull(main);
   };
-
-  // const particlesLoaded = (container) => {
-  //   console.log(container);
-  // };
 
   return (
     <Layout>
       <Container id="home" whileInView={{ opacity: 0.999 }}>
-        <Message message={message} duration={20000} />
+        <FlashMessage message={message} duration={10000} type="alert" />
 
         <div style={{ zIndex: "-1" }}>
           <Particles
