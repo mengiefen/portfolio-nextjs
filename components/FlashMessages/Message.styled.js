@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 const FlashMessage = styled(motion.div)`
   display: flex;
@@ -12,6 +12,9 @@ const FlashMessage = styled(motion.div)`
   border-radius: 5px;
   overflow: hidden;
   background-color: ${({ theme }) => theme.gray};
+  position: relative;
+  cursor: pointer;
+  z-index: 1111;
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     width: 320px;
@@ -122,6 +125,16 @@ const FlashMessage = styled(motion.div)`
     &:hover {
       color: ${({ theme }) => theme.red};
     }
+  }
+
+  .progress-bar {
+    width: 100.2%;
+    position: absolute;
+    bottom: -0.1rem;
+    left: 0;
+    height: 10px;
+    border-radius: none;
+    accent-color: #f44336;
   }
 `;
 
