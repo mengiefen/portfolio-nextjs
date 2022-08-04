@@ -8,6 +8,7 @@ const Container = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 3rem auto;
 
   background: linear-gradient(
     -65deg,
@@ -18,19 +19,19 @@ const Container = styled(motion.section)`
   );
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
-    padding-bottom: 4rem;
-    min-height: 60vh;
+    padding: 3rem auto;
+    min-height: 70vh;
   }
 
   .content {
     display: flex;
     justify-content: center;
-
     width: 90%;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       flex-direction: column;
       align-items: center;
+      margin-bottom: 2rem;
     }
   }
 

@@ -6,6 +6,7 @@ const Container = styled(motion.section)`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
   background-color: ${(props) => props.theme.bg1};
   background: linear-gradient(
     65deg,
@@ -17,8 +18,6 @@ const Container = styled(motion.section)`
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
-    height: auto;
-    min-height: 50vh;
     width: 100vw;
     align-items: start;
     margin: 0;
@@ -26,7 +25,7 @@ const Container = styled(motion.section)`
   }
 
   @media (max-width: ${({ theme }) => theme.device.mobileL}) {
-    height: 100vh;
+    min-height: 80vh;
   }
 
   .text-area {
@@ -38,17 +37,16 @@ const Container = styled(motion.section)`
     padding-top: 10rem;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
-      margin-top: 2rem;
+      margin-top: 4rem;
       max-width: 70%;
-      padding-top: 5rem;
       align-items: start;
+      padding-top: 5rem;
     }
 
     @media (max-width: ${({ theme }) => theme.device.mobileL}) {
       flex-direction: column;
       flex: 2;
       max-width: 85%;
-      padding-top: 5rem;
       align-items: center;
       padding: 5rem 1% 0 3%;
     }
@@ -79,6 +77,7 @@ const Container = styled(motion.section)`
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       padding-left: 1rem;
       text-align: center;
+      font-size: min(4vw, 1.75rem);
     }
   }
 
@@ -94,6 +93,7 @@ const Container = styled(motion.section)`
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       padding-left: 1rem;
+      font-size: min(5vw, 1.2rem);
     }
 
     span {

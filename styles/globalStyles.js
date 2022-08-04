@@ -68,9 +68,9 @@ body{
     border: none;
 
     @media (max-width:768px) { 
-      /* position: absolute; */
-      top: 25%;
-      right: 0.2rem;
+      position: absolute;
+      top: 5rem;
+      right: -0.5rem;
     } 
   }
 
