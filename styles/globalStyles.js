@@ -4,30 +4,23 @@ const GlobalStyle = createGlobalStyle`
 html{
   box-sizing: border-box; 
   display:block;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  background-color: #afafaf;
   scroll-behavior: smooth;  
 }
 
 body{
-  min-height:96vh;
-  width: 94vw;  
-  margin: 0 auto;
   /* font-family: 'Bebas Neue', cursive;
   font-family: 'Montserrat', sans-serif; */
-
   font-family: 'Bebas Neue', cursive;
   font-family: 'Edu TAS Beginner', cursive;
 
   font-family: 'Pacifico', cursive;
   font-family: 'Open Sans', sans-serif;
   position: relative;  
-    
-  @media (max-width:768px) { 
-      width: 100vw;
-      margin: 0;   
-    }   
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .scroll-to-home {
@@ -56,7 +49,7 @@ body{
 .theme-switcher {  
     position: fixed;  
     top: 50%;
-    right: -7.5px;
+    right: 2px;
     display: flex;
     justify-content: flex-end;
     background-color: transparent;
@@ -69,12 +62,12 @@ body{
 
     @media (max-width:768px) { 
       position: absolute;
-      top: 5rem;
-      right: -0.5rem;
+      top: 6rem;
+      right: 0.5rem;
+     
     } 
   }
 
- 
 .light-icon
   {
     color: #fafafa;

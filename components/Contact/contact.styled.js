@@ -53,13 +53,14 @@ const Container = styled(motion.section)`
   .form-holder {
     display: flex;
     gap: 5rem;
+    width: 100%;
 
     @media (max-width: ${({ theme }) => theme.device.laptop}) {
       gap: 2rem;
     }
 
     @media (max-width: ${({ theme }) => theme.device.mobileL}) {
-      gap: 1rem;
+      gap: 0rem;
     }
 
     .contact-image {
@@ -121,6 +122,10 @@ const Container = styled(motion.section)`
     border: 0.5px solid ${({ theme }) => theme.primary};
     transition: all 0.2s ease-in;
 
+    @media (max-width: ${({ theme }) => theme.device.mobileS}) {
+      width: 95%;
+    }
+
     &:hover,
     &:focus,
     &:active {
@@ -149,6 +154,10 @@ const Container = styled(motion.section)`
     color: ${({ theme }) => theme.primary};
     border: 0.5px solid ${({ theme }) => theme.primary};
     transition: all 0.2s ease-in;
+
+    @media (max-width: ${({ theme }) => theme.device.mobileS}) {
+      width: 95%;
+    }
 
     &:hover,
     &:focus {
