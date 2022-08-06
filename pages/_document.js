@@ -1,11 +1,30 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
+          <meta
+            name="description"
+            content="A portfolio website built with Next.js, and styled-components"
+          />
+          <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+          <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+          <meta property="og:title" content="Mengstu Fentaw Portfolio" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:description"
+            content="A portfolio website built with Next.js, and styled-components"
+          />
+          <meta
+            property="og:image"
+            content="https://live.staticflickr.com/65535/52267053748_c37dad3ffa_k.jpg"
+          />
+          <meta property="og:url" content="https://mengstufentaw.vercel.app/" />
+          <meta name="twitter:card" content="summary_large_image" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
