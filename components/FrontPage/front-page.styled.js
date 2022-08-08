@@ -11,7 +11,7 @@ const Container = styled(motion.section)`
   background: linear-gradient(
     65deg,
     ${(props) => props.theme.gray} 0%,
-    ${(props) => props.theme.bg} 15%,
+    ${(props) => props.theme.bg} 10%,
     ${(props) => props.theme.bg1} 90%,
     ${(props) => props.theme.green} 100%
   );
@@ -34,13 +34,13 @@ const Container = styled(motion.section)`
     align-items: center;
     max-width: 60%;
     padding: 0 3%;
-    padding-top: 10rem;
+    padding-top: 2.5rem;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       margin-top: 4rem;
       max-width: 70%;
       align-items: start;
-      padding-top: 5rem;
+      padding-top: 2.5rem;
     }
 
     @media (max-width: ${({ theme }) => theme.device.mobileL}) {
@@ -54,20 +54,24 @@ const Container = styled(motion.section)`
 
   .heading {
     color: ${(props) => props.theme.primary};
-    font-size: min(3.5vw, 2rem);
+    font-size: min(5.5vw, 3rem);
     text-transform: capitalize;
-    line-height: 0;
+    line-height: 1.5;
     letter-spacing: 4px;
     font-weight: bold;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Edu TAS Beginner', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     /* font-family: 'Arbutus', cursive; */
     /* font-family: 'Bebas Neue', cursive; */
     /* font-family: 'Edu TAS Beginner', cursive; */
     /* font-family: 'Margarine', cursive; */
     /* font-family: 'Nova Oval', cursive; */
     /* font-family: 'Pacifico', cursive; */
-    font-family: 'Yatra One', cursive;
+    /* font-family: 'Yatra One', cursive; */
     font-family: 'Zen Dots', cursive;
 
     @media (max-width: ${({ theme }) => theme.device.laptop}) {
@@ -78,6 +82,45 @@ const Container = styled(motion.section)`
       padding-left: 1rem;
       text-align: center;
       font-size: min(4vw, 1.75rem);
+    }
+  }
+
+  .greeting {
+    font-size: min(2.5vw, 1.5rem);
+  }
+
+  .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
     }
   }
 
@@ -144,7 +187,7 @@ const Container = styled(motion.section)`
   }
 
   .img {
-    clip-path: polygon(50% 100%, 100% 38%, 75% 0, 25% 0, 0% 38%);
+    clip-path: polygon(50% 100%, 100% 70%, 75% 0, 25% 0, 0% 70%);
     opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.5 : 0.2)};
 
     @media (max-width: ${({ theme }) => theme.device.mobileS}) {

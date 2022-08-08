@@ -14,7 +14,7 @@ const Container = styled(motion.section)`
   background: linear-gradient(
     65deg,
     ${(props) => props.theme.gray} 0%,
-    ${(props) => props.theme.bg} 15%,
+    ${(props) => props.theme.bg} 10%,
     ${(props) => props.theme.bg1} 90%,
     ${(props) => props.theme.green} 100%
   );

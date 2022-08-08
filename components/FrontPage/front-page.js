@@ -1,16 +1,16 @@
-import Image from "next/image";
-import { ButtonOutline } from "../Buttons/buttons.styled";
-import Layout from "../Layout/layout";
-import Container from "./front-page.styled";
-import bgImg from "../../public/picture.png";
-import SocialMedia from "../SocialMedia/SocialMedia";
-import Typed from "react-typed";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "../../data/particlesConfig.json";
-import Message from "../FlashMessages/Messages";
-import { constraintsRef } from "../FlashMessages/Messages";
-import FlashMessage from "../FlashMessages/FlashMessage";
+import Image from 'next/image';
+import { ButtonOutline } from '../Buttons/buttons.styled';
+import Layout from '../Layout/layout';
+import Container from './front-page.styled';
+import bgImg from '../../public/picture-1.png';
+import SocialMedia from '../SocialMedia/SocialMedia';
+import Typed from 'react-typed';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import particlesConfig from '../../data/particlesConfig.json';
+import Message from '../FlashMessages/Messages';
+import { constraintsRef } from '../FlashMessages/Messages';
+import FlashMessage from '../FlashMessages/FlashMessage';
 const FrontPage = () => {
   const message =
     "Please note that this portfolio website is under construction. I'm working on diffrent features like making the app responsive.";
@@ -23,7 +23,7 @@ const FrontPage = () => {
       <Container id="home" whileInView={{ opacity: 0.999 }}>
         <FlashMessage message={message} duration={10000} type="alert" />
 
-        <div style={{ zIndex: "-1" }}>
+        <div style={{ zIndex: '-1' }}>
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -36,11 +36,15 @@ const FrontPage = () => {
         <SocialMedia />
         <aside className="text-area">
           <h1 className="heading">
-            Hello, <span>I&apos;m Mengstu</span>
+            <span className="greeting">
+              Hi <span className="wave">👋</span>
+            </span>
+
+            <span className="my-name"> I&apos;m Mengstu</span>
           </h1>
           <h2 className="sub-heading">
             <Typed
-              strings={["Frontend", "Backend", "Fullstack"]}
+              strings={['Frontend', 'Backend', 'Fullstack']}
               typeSpeed={80}
               backSpeed={80}
               backDelay={1000}

@@ -7,14 +7,16 @@ const Container = styled(motion.section)`
   background-color: ${(props) => props.theme.bg1};
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   padding: 3rem auto;
+  background-image: url('img.svg');
+  background-size: cover;
 
   background: linear-gradient(
     -65deg,
     ${(props) => props.theme.green} 0%,
     ${(props) => props.theme.bg1} 10%,
-    ${(props) => props.theme.bg} 85%,
+    ${(props) => props.theme.bg} 90%,
     ${(props) => props.theme.gray} 100%
   );
 
@@ -26,13 +28,22 @@ const Container = styled(motion.section)`
   .content {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 90%;
+    margin-right: 5%;
+    padding-right: 2rem;
+    height: 100%;
+    border-radius: 0.5rem;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       flex-direction: column;
       align-items: center;
       margin-bottom: 2rem;
     }
+  }
+
+  figure {
+    background-image: url('./img.svg');
   }
 
   .img {
@@ -59,14 +70,22 @@ const Container = styled(motion.section)`
     flex-direction: column;
     color: ${(props) => props.theme.primary};
     flex: 2;
-    align-items: center;
+    align-items: flex-end;
+    max-width: 70%;
+    padding: 2rem;
+    max-width: 800px;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       line-height: 1.75;
+      padding: 0.5rem;
     }
 
     .general-desc {
       text-align: justify;
+    }
+
+    .general-desc-para-2 {
+      margin-bottom: 4rem;
     }
   }
 

@@ -1,23 +1,31 @@
-import Link from "next/link";
-import Nav from "./nav.styled";
-import { motion } from "framer-motion";
+import Link from 'next/link';
+import Nav from './nav.styled';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
+const variants = {
+  closed: { opacity: 0, y: 0, height: 0 },
+  open: { opacity: 1, y: 0, height: '90vh' },
+};
 
 const NavBar = ({ handleClick }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const lists = [
-    { id: 1, link: "HOME" },
-    { id: 2, link: "ABOUT" },
-    { id: 3, link: "SKILLS" },
-    { id: 4, link: "PORTFOLIO" },
-    { id: 5, link: "CONTACT" },
+    { id: 1, link: 'HOME' },
+    { id: 2, link: 'ABOUT' },
+    { id: 3, link: 'SKILLS' },
+    { id: 4, link: 'PORTFOLIO' },
+    { id: 5, link: 'CONTACT' },
   ];
 
-  document.addEventListener("scroll", handleClick);
+  document.addEventListener('scroll', handleClick);
 
   return (
     <Nav
-      initial={{ height: 0 }}
-      animate={{ height: "90vh" }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      initial={'closed'}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      animate={'open'}
+      variants={variants}
       onScroll={handleClick}
     >
       <ul className="menu-list">
@@ -26,7 +34,7 @@ const NavBar = ({ handleClick }) => {
             className="menu-item"
             key={list.id}
             whileHover={{ x: 5, scale: 1.05 }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
+            transition={{ ease: 'easeInOut', duration: 0.5 }}
             onClick={handleClick}
           >
             <Link href={`#${list.link}`.toLowerCase()}>

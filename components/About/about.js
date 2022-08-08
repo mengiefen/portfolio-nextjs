@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Container from './about.styled';
-import bgImg from '../../public/picture.png';
+import bgImg from '../../public/picture_sm.png';
 import { motion } from 'framer-motion';
 
 import Button from '../Buttons/buttons';
@@ -11,7 +11,6 @@ const About = () => {
     <Container id="about">
       <div className="content">
         <motion.figure
-          className="img"
           initial={{ scale: 0.5 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ ease: 'easeOut', duration: 1 }}
@@ -41,7 +40,7 @@ const About = () => {
             embedded systems, power electronics & drives.
           </p>
 
-          <p className="general-desc">
+          <p className="general-desc general-desc-para-2">
             I&apos;m also an engineering instructor in a local college working
             for more than 11 years. This experience coupled with my skill in
             programming gave me an opportunity to adapt to different working

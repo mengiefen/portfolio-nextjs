@@ -1,14 +1,14 @@
-import Image from "next/image";
-import React from "react";
-import Container from "./SlideItem.styled";
-import Link from "next/link";
-import { VscArrowSmallRight } from "react-icons/vsc";
+import Image from 'next/image';
+import React from 'react';
+import Container from './SlideItem.styled';
+import Link from 'next/link';
+import { VscArrowSmallRight } from 'react-icons/vsc';
 
 const SlideItem = ({ slide }) => {
   return (
     <Container
       whileHover={{
-        y: -5,
+        y: -1,
       }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -39,7 +39,7 @@ const SlideItem = ({ slide }) => {
         <div className="project-links">
           <Link href={slide.sourceLink} className="project-link">
             <a target="_blank">
-              See source <VscArrowSmallRight />{" "}
+              See source <VscArrowSmallRight />{' '}
             </a>
           </Link>
           <Link href={slide.liveLink} className="project-link">

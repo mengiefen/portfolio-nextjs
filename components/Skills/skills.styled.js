@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -11,7 +11,7 @@ const Container = styled(motion.section)`
   background: linear-gradient(
     65deg,
     ${(props) => props.theme.gray} 0%,
-    ${(props) => props.theme.bg} 15%,
+    ${(props) => props.theme.bg} 10%,
     ${(props) => props.theme.bg1} 90%,
     ${(props) => props.theme.green} 100%
   );
@@ -54,11 +54,11 @@ const Container = styled(motion.section)`
     padding: 1rem;
     width: 80%;
     height: 75%;
-    background-color: ${({ theme }) => theme.bg};
+    /* background-color: ${({ theme }) => theme.bg}; */
     color: ${(props) => props.theme.bg};
     border-radius: 1rem;
     position: relative;
-    box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray};
+    /* box-shadow: 0 4px 16px 0 ${(props) => props.theme.gray}; */
     animation: infinite;
     overflow: hidden;
 

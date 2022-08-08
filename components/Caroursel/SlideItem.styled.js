@@ -38,7 +38,6 @@ const Container = styled(motion.div)`
 
   &:hover {
     box-shadow: 0 0 10px ${({ theme }) => theme.tertiary};
-    transform: translateY(-3px);
   }
 
   .slide-info {

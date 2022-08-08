@@ -15,7 +15,7 @@ const Container = styled(motion.section)`
     -65deg,
     ${(props) => props.theme.green} 0%,
     ${(props) => props.theme.bg1} 10%,
-    ${(props) => props.theme.bg} 85%,
+    ${(props) => props.theme.bg} 90%,
     ${(props) => props.theme.gray} 100%
   );
 

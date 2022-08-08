@@ -10,17 +10,14 @@ html{
 }
 
 body{
-  /* font-family: 'Bebas Neue', cursive;
-  font-family: 'Montserrat', sans-serif; */
   font-family: 'Bebas Neue', cursive;
   font-family: 'Edu TAS Beginner', cursive;
-
   font-family: 'Pacifico', cursive;
   font-family: 'Open Sans', sans-serif;
   position: relative;  
   width: 100vw;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 .scroll-to-home {
@@ -137,8 +134,8 @@ export const darkTheme = {
   primary: '#F4FFFDFF',
   secondary: '#F9DC5CFF',
   tertiary: '#ED254EFF',
-  bg: '#011936FF',
-  bg1: '#011329',
+  bg: '#001220',
+  bg1: '#001220',
   gray: '#777',
   green: '#1FB57B',
   yellow: '#FAD9A1',

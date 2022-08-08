@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import INBOX from '../../public/inbox.svg';
 import ENVELOPE from '../../public/envelope.svg';
 import { motion } from 'framer-motion';
+
 import FlashMessage from '../FlashMessages/FlashMessage';
 
 const Contact = () => {
@@ -63,11 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <Container
-      id="contact"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-    >
+    <Container id="contact">
       {flash.show && (
         <FlashMessage
           message={flash.message}
@@ -79,7 +76,12 @@ const Contact = () => {
         <h2>Contact me</h2>
         <div className="border-bottom"></div>
       </div>
-      <div className="form-holder">
+      <motion.div
+        className="form-holder"
+        initial={{ x: -10 }}
+        whileInView={{ x: 0 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <form ref={form} onSubmit={handleSubmit}>
           <p>
             I&apos;m always interested in hearing about new projects, so if
@@ -124,14 +126,14 @@ const Contact = () => {
           </Button>
         </form>
         <motion.div
-          initial={{ scale: 0.5, x: 100 }}
-          whileInView={{ scale: 0.75, x: 0 }}
+          initial={{ scale: 0.8, x: 10 }}
+          whileInView={{ scale: 0.8, x: 0 }}
           transition={{ ease: 'easeOut', duration: 1 }}
           className="contact-image"
         >
           <Image src={ENVELOPE} width={300} height={300} alt="picture of me" />
         </motion.div>
-      </div>
+      </motion.div>
     </Container>
   );
 };

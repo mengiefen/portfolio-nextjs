@@ -4,6 +4,7 @@ import SlideItem from './SlideItem';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import slideData from '../../data/carousel';
 import { getWidth, rotateBack, rotateForward } from './slide';
+import { AnimatePresence } from 'framer-motion';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
@@ -21,51 +22,56 @@ import { Keyboard, Scrollbar, Navigation, Pagination, Autoplay } from 'swiper';
 const Slider = () => {
   return (
     <Container>
-      <Swiper
-        slidesPerView={1}
-        centeredSlides={false}
-        loop={true}
-        grabCursor={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        keyboard={{
-          enabled: true,
-        }}
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            slidesPerGroupSkip: 3,
-          },
-          769: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            slidesPerGroupSkip: 2,
-          },
+      <AnimatePresence>
+        <Swiper
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          slidesPerView={1}
+          centeredSlides={false}
+          loop={true}
+          grabCursor={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          keyboard={{
+            enabled: true,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              slidesPerGroupSkip: 3,
+            },
+            769: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              slidesPerGroupSkip: 2,
+            },
 
-          480: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            slidesPerGroupSkip: 1,
-          },
-        }}
-        scrollbar={false}
-        navigation
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        {slideData.map((item, index) => (
-          <SwiperSlide key={item.id}>
-            <SlideItem slide={item} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            480: {
+              slidesPerView: 1,
+              slidesPerGroup: 1,
+              slidesPerGroupSkip: 1,
+            },
+          }}
+          scrollbar={false}
+          navigation
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          {slideData.map((item, index) => (
+            <SwiperSlide key={item.id}>
+              <SlideItem slide={item} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </AnimatePresence>
     </Container>
   );
 };

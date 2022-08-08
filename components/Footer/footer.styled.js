@@ -15,7 +15,7 @@ const StyledFooter = styled(motion.footer)`
     -35deg,
     ${(props) => props.theme.green} 0%,
     ${(props) => props.theme.bg1} 10%,
-    ${(props) => props.theme.bg} 82.5%,
+    ${(props) => props.theme.bg} 90%,
     ${(props) => props.theme.gray} 100%
   );
 
