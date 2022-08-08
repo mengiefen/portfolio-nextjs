@@ -46,7 +46,8 @@ body{
 .theme-switcher {  
     position: fixed;  
     top: 50%;
-    right: 2px;
+    right: 0;
+    padding: 0;
     display: flex;
     justify-content: flex-end;
     background-color: transparent;

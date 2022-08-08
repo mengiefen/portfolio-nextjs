@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.bg1};
   display: flex;
   align-items: center;

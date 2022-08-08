@@ -1,10 +1,10 @@
-import React from "react";
-import Container from "./Carousel.styled";
-import Slider from "./Slider";
+import React from 'react';
+import Container from './Carousel.styled';
+import Slider from './Slider';
 
 const Carousel = () => {
   return (
-    <Container >
+    <Container>
       <h2>
         My Projects
         <div className="border-bottom"></div>

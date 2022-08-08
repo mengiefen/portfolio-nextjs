@@ -44,7 +44,9 @@ const SocialMedia = () => {
 const Container = styled.div`
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0;
+  transform: translateX(-50%);
+  border-right: 0;
   min-height: 10rem;
   min-width: 2rem;
   transition: all 1s ease-in-out;

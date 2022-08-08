@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
   width: 90%;
-  min-height: 70vh;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.bg};
   display: flex;
   flex-direction: column;

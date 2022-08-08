@@ -46,7 +46,7 @@ const Container = styled(motion.div)`
 
   .swiper {
     width: 90%;
-    height: 620px;
+    height: 560px;
 
     @media (max-width: ${({ theme }) => theme.device.mobileL}) {
       width: 95%;

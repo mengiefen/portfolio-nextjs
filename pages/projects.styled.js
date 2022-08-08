@@ -7,8 +7,7 @@ const Container = styled(motion.section)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
-  padding-top: 3rem;
+  height: 100vh;
   color: ${(props) => props.theme.primary};
   background-color: ${({ theme }) => theme.bg};
   background: linear-gradient(
@@ -36,7 +35,6 @@ const Container = styled(motion.section)`
 
   .border-bottom {
     width: 40%;
-    padding-top: 1rem;
     border-bottom: 4px solid ${({ theme }) => theme.tertiary};
     margin-right: 5%;
     margin-left: auto;
@@ -45,12 +43,14 @@ const Container = styled(motion.section)`
   .left-btn {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     left: 0;
   }
 
   .right-btn {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     right: 0;
   }
 `;

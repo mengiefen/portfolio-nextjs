@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Container = styled(motion.section)`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
