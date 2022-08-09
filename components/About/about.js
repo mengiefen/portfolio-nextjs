@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Container from './about.styled';
-import bgImg from '../public/picture_sm.png';
+import bgImg from '../../public/picture_sm.png';
 import { motion } from 'framer-motion';
 
 import Button from '../Buttons/buttons';

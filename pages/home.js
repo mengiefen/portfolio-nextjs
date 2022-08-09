@@ -11,6 +11,7 @@ import particlesConfig from '../data/particlesConfig.json';
 import Message from '../components/FlashMessages/Messages';
 import { constraintsRef } from '../components/FlashMessages/Messages';
 import FlashMessage from '../components/FlashMessages/FlashMessage';
+import Link from 'next/link';
 const FrontPage = () => {
   const message =
     "Please note that this portfolio website is under construction. I'm working on diffrent features like making the app responsive.";
@@ -20,7 +21,7 @@ const FrontPage = () => {
 
   return (
     <Layout>
-      {/* <Container id="home" whileInView={{ opacity: 0.999 }}>
+      <Container id="home" whileInView={{ opacity: 0.999 }}>
         <FlashMessage message={message} duration={10000} type="alert" />
 
         <div style={{ zIndex: '-1' }}>
@@ -56,8 +57,9 @@ const FrontPage = () => {
             some of my work and experience! If you like what you see and have a
             project you need to be coded, don’t hesitate to contact me.
           </p>
+
           <ButtonOutline
-            href="#contact"
+            href="/contact"
             initial={{ y: 0, x: 20 }}
             whileInView={{ y: 20, x: 0, scale: [0.6, 1, 0.75, 1] }}
             transition={{ times: [0, 0.1, 0.9, 1] }}
@@ -75,7 +77,7 @@ const FrontPage = () => {
             className="img"
           />
         </figure>
-      </Container> */}
+      </Container>
     </Layout>
   );
 };

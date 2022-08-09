@@ -17,7 +17,7 @@ body{
   position: relative;  
   width: 100vw;
   margin: 0;
-  overflow-x: hidden; 
+  overflow: hidden; 
 }
 
 .scroll-to-home {
@@ -45,7 +45,7 @@ body{
 
 .theme-switcher {  
     position: fixed;  
-    top: 50%;
+    top: 5%;
     right: 0;
     padding: 0;
     display: flex;
@@ -69,30 +69,30 @@ body{
 .light-icon
   {
     color: #fafafa;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     @media (max-width:768px) {    
-      font-size: 1rem;
+      font-size: 0.8rem;
     } 
   }  
 
   .dark-icon {
       color: #fafafa;
-      font-size: 1.5rem;
-    @media (max-width:768px) {    
       font-size: 1rem;
+    @media (max-width:768px) {    
+      font-size: 0.8rem;
     } 
   }  
 
 .switch {
-  width: 45px;
-  height: 15px;
+  width: 35px;
+  height: 10px;
   background-color: #2d3142;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   border-radius: 25px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer; 
   border: 2px solid #fafafa;
   z-index: 22222;
@@ -109,8 +109,8 @@ body{
 }
 
 .handle {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-color:rgba(255, 255, 255, 0.4);;
   border-radius: 20px;
   display: flex;

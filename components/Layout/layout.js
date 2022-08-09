@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <SideNav />
-      <Navbar />
+      {/* <Navbar /> */}
       <section>{children}</section>
     </>
   );

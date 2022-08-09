@@ -1,9 +1,9 @@
-import Btn from "./buttons.styled";
+import Btn from './buttons.styled';
 
 const Button = ({ type, text, link, icon }) => {
   return (
-    <Btn type="button" href={link} target={link !== "#contact" && "_blank"}>
-      {type === "underline" ? (
+    <Btn type="button" href={link} target={link !== '#contact' && '_blank'}>
+      {type === 'underline' ? (
         <span className="underline"></span>
       ) : (
         <span className="slide">{text}</span>
