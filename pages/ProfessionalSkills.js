@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Container from './skills.styled';
 import { professionalSkill } from '../data/skillLogo';
-import Skills from './skills';
+import Skills from './skills1';
 
 const ProfessionalSkills = () => {
   return (

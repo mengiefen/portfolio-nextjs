@@ -17,7 +17,7 @@ body{
   position: relative;  
   width: 100vw;
   margin: 0;
-  overflow: hidden; 
+  overflow-x: hidden; 
 }
 
 .scroll-to-home {
@@ -44,9 +44,9 @@ body{
 }
 
 .theme-switcher {  
-    position: fixed;  
-    top: 5%;
-    right: 0;
+    position: absolute;  
+    top: min(5rem, 5vh);
+    right: 10rem;
     padding: 0;
     display: flex;
     justify-content: flex-end;
@@ -57,6 +57,7 @@ body{
     z-index: 11111;
     outline: none;
     border: none;
+    transform: translateY(-40%);
 
     @media (max-width:768px) { 
       position: absolute;

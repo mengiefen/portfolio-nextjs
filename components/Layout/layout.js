@@ -5,8 +5,8 @@ import SideNav from '../SideNav/SideNav';
 const Layout = ({ children }) => {
   return (
     <>
-      <SideNav />
-      {/* <Navbar /> */}
+      {/* <SideNav /> */}
+      <Navbar />
       <section>{children}</section>
     </>
   );
