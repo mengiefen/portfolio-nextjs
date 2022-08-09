@@ -39,8 +39,7 @@ body{
 
   :hover {
     transform: scale(1.05);
-  } 
-  
+  }   
 }
 
 .theme-switcher {  
@@ -57,7 +56,7 @@ body{
     z-index: 11111;
     outline: none;
     border: none;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
 
     @media (max-width:768px) { 
       position: absolute;

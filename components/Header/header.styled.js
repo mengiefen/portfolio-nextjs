@@ -8,7 +8,7 @@ const Header = styled(motion.header)`
   height: min(10rem, 10vh);
   width: 100%;
   background-color: ${(props) => props.theme.bg};
-  border-bottom: 0.5px solid ${(props) => props.theme.tertiary};
+  /* border-bottom: 0.5px solid ${(props) => props.theme.tertiary}; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +20,7 @@ const Header = styled(motion.header)`
     ${(props) => props.theme.bg} 95%,
     ${(props) => props.theme.gray} 100%
   );
+  box-shadow: -1px 0px 2px ${(props) => props.theme.gray};
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     width: 100vw;
