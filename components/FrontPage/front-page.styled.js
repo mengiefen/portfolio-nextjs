@@ -15,7 +15,7 @@ const Container = styled(motion.section)`
     ${(props) => props.theme.bg1} 90%,
     ${(props) => props.theme.green} 100%
   );
-  position: relative;
+  position: relative; 
 
   @media (max-width: ${({ theme }) => theme.device.tablet}) {
     width: 100vw;

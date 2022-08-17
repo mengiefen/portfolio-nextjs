@@ -1,10 +1,5 @@
 import Head from 'next/head';
-import About from '../components/About/about';
-import Contact from '../components/Contact/contact';
-import FrontPage from '../components/FrontPage/front-page';
-import Portfolio from '../components/Portfolio/portfolio';
-import Skills from '../components/Skills/skills';
-import Footer from '../components/Footer/footer';
+import Layout from '../components/Layout/layout';
 
 const Home = () => {
   return (
@@ -47,12 +42,8 @@ const Home = () => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <FrontPage />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Contact />
-      <Footer />
+      <Layout />
+      
     </main>
   );
 };

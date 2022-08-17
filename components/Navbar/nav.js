@@ -4,14 +4,13 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const variants = {
-  closed: { opacity: 0, x: '100%', height: 0 },
-  open: { opacity: 1, x: 0, height: '90vh' },
+  closed: { opacity: 0,  height: 0 },
+  open: { opacity: 1, height: '100vh' },
 };
 
 const NavBar = ({ handleClick }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const lists = [
-    { id: 1, link: 'HOME' },
+  const lists = [   
     { id: 2, link: 'ABOUT' },
     { id: 3, link: 'SKILLS' },
     { id: 4, link: 'PROJECTS' },

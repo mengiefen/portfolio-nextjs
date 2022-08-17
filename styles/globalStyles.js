@@ -1,12 +1,31 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
+:root { 
+  --dark-primary: #F4FFFDFF;
+  --dark-secondary: #F9DC5CFF;
+  --dark-tertiary: #ED254EFF;
+  --dark-bg: #001220;
+  --dark-bg1: #001220;
+  --dark-gray: #777;
+  --green: #1FB57B;
+  --yellow: #FAD9A1;
+  --red: #F37878;
+  --light-primary: #2d3142;
+  --light-secondary: #F36B6B;
+  --light-tertiary: #5DAE8B;
+  --ligh-bg: #fafafa;
+  --light-bg1: #F0F0F0;
+  --light-gray: #b0b0b0;
+}
+
 html{
   box-sizing: border-box; 
   display:block;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth; ;
 }
 
 body{
@@ -14,6 +33,7 @@ body{
   font-family: 'Edu TAS Beginner', cursive;
   font-family: 'Pacifico', cursive;
   font-family: 'Open Sans', sans-serif;
+
   position: relative;  
   width: 100vw;
   margin: 0;
@@ -29,13 +49,14 @@ body{
   padding: 0.75rem;
   z-index: 11111;
   border: none;
-  background-color:#ED254EFF;
-  color: #fafafa;
+  background-color:var(--dark-tertiary);
+  color:var(--dark-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px 2px var(--dark-tertiary);
 
   :hover {
     transform: scale(1.05);
@@ -68,7 +89,7 @@ body{
 
 .light-icon
   {
-    color: #fafafa;
+    color:var(--dark-primary);
     font-size: 1rem;
 
     @media (max-width:768px) {    
@@ -77,7 +98,7 @@ body{
   }  
 
   .dark-icon {
-      color: #fafafa;
+      color:var(--dark-primary);
       font-size: 1rem;
     @media (max-width:768px) {    
       font-size: 0.8rem;
@@ -94,7 +115,7 @@ body{
   border-radius: 25px;
   padding: 5px;
   cursor: pointer; 
-  border: 2px solid #fafafa;
+  border: 2px solid var(--green);
   z-index: 22222;
 
   @media (max-width:768px) {    
@@ -124,13 +145,6 @@ body{
 }
 `;
 
-// export const darkTheme = {
-//   primary: "#dedede",
-//   secondary: "#00a6a7",
-//   tertiary: "#bfc0c0",
-//   bg: "#2d3142",
-// };
-
 export const darkTheme = {
   primary: '#F4FFFDFF',
   secondary: '#F9DC5CFF',
@@ -152,22 +166,6 @@ export const darkTheme = {
     desktop: '2560px',
   },
 };
-
-//
-
-// export const darkTheme = {
-//   primary: "#F7F4E9",
-//   secondary: "#3CBCC3",
-//   tertiary: "#bfc0c0",
-//   bg: "#1D1D2C",
-// };
-
-// export const darkTheme = {
-//   primary: "#DEB992",
-//   secondary: "#1BA098",
-//   tertiary: "#bfc0c0",
-//   bg: "#051622",
-// };
 
 export const lightTheme = {
   primary: '#2d3142',

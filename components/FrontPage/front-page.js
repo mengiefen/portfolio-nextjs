@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { ButtonOutline } from '../Buttons/buttons.styled';
-import Layout from '../Layout/layout';
 import Container from './front-page.styled';
 import bgImg from '../../public/picture-1.png';
 import SocialMedia from '../SocialMedia/SocialMedia';
@@ -8,20 +7,18 @@ import Typed from 'react-typed';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import particlesConfig from '../../data/particlesConfig.json';
-import Message from '../FlashMessages/Messages';
-import { constraintsRef } from '../FlashMessages/Messages';
 import FlashMessage from '../FlashMessages/FlashMessage';
 const FrontPage = () => {
   const message =
-    "Please note that this portfolio website is under construction. I'm working on diffrent features like making the app responsive.";
+    "Thanks for visiting my portfolio. I'm a passionate developer looking for new opportunities to serve, grow and learn new technologies.";
   const particlesInit = async (main) => {
     await loadFull(main);
   };
 
   return (
-    <Layout>
-      <Container id="home" whileInView={{ opacity: 0.999 }}>
-        <FlashMessage message={message} duration={10000} type="alert" />
+   
+      <Container id="home">
+        <FlashMessage message={message} duration={100000} />
 
         <div style={{ zIndex: '-1' }}>
           <Particles
@@ -58,9 +55,8 @@ const FrontPage = () => {
             project you need to be coded, don’t hesitate to contact me.
           </p>
           <ButtonOutline
-            href="#contact"
-            initial={{ y: 0, x: 20 }}
-            whileInView={{ y: 20, x: 0, scale: [0.6, 1, 0.75, 1] }}
+            href="#contact"            
+            whileInView={{  scale: [0.6, 1, 0.75, 1] }}
             transition={{ times: [0, 0.1, 0.9, 1] }}
           >
             Contact me
@@ -77,7 +73,7 @@ const FrontPage = () => {
           />
         </figure>
       </Container>
-    </Layout>
+    
   );
 };
 
