@@ -39,6 +39,8 @@ const Container = styled(motion.section)`
       flex-direction: column;
       align-items: center;
       margin-bottom: 2rem;
+      margin-right: 0;
+      padding-right: 1rem;
     }
   }
 
@@ -77,7 +79,7 @@ const Container = styled(motion.section)`
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       line-height: 1.75;
-      padding: 0.5rem;
+      padding: 1rem;
     }
 
     .general-desc {
