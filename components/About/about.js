@@ -4,7 +4,6 @@ import bgImg from '../../public/picture_sm.png';
 import { motion } from 'framer-motion';
 
 import Button from '../Buttons/buttons';
-import { FaChevronRight } from 'react-icons/fa';
 
 const About = () => {
   return (
