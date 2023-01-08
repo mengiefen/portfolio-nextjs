@@ -45,69 +45,6 @@ const About = () => {
             programming gave me an opportunity to adapt to different working
             environments.
           </p>
-          {/* <div className="card-list">
-              <div className="card">
-                <div className="card-detail">
-                  <Image
-                    src={communication}
-                    width={50}
-                    height={50}
-                    alt="communication icons"
-                    className="card-icon"
-                  />
-                  <h4 className="card-title">GOOD COMMUNICATION</h4>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-detail">
-                  <Image
-                    src={webdesign}
-                    width={50}
-                    height={50}
-                    alt="communication icons"
-                    className="card-icon"
-                  />
-                  <h4 className="card-title">EXCELLENT PROGRAMMING SKILLS</h4>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-detail">
-                  <Image
-                    src={test}
-                    width={50}
-                    height={50}
-                    alt="communication icons"
-                    className="card-icon"
-                  />
-                  <h4 className="card-title">TEST DRIVEN DEVELOPEMNT</h4>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-detail">
-                  <Image
-                    src={workflows}
-                    width={50}
-                    height={50}
-                    alt="communication icons"
-                    className="card-icon"
-                  />
-                  <h4 className="card-title">WORK FLOWS</h4>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-detail">
-                  <Image
-                    src={remotework}
-                    width={50}
-                    height={50}
-                    alt="communication icons"
-                    className="card-icon"
-                  />
-                  <h4 className="card-title">REMOTE PAIR PROGRAMMING</h4>
-                </div>
-              </div>
-            </div> */}
-
           <Button
             type="underline"
             text="See my resume"
