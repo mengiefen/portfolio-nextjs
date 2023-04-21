@@ -1,4 +1,5 @@
-import StyledFooter from './footer.styled';
+import StyledFooter from "./footer.styled";
+import NavLink from "../Navbar/NavLink";
 
 import {
   FaFacebookSquare,
@@ -7,29 +8,33 @@ import {
   FaGithubSquare,
   FaAngellist,
   FaMedium,
-} from 'react-icons/fa';
-import Link from 'next/link';
-
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
     <StyledFooter>
       <div className="icon-list">
-        <Link href="https://twitter.com/MengistuFentaw">
-          <a target="_blank"><FaTwitterSquare className="fa twitter" /></a> 
-        </Link>
-        <Link href="https://www.linkedin.com/in/mengstufentaw/"><a target="_blank"><FaLinkedin className="fa linkedin" /> </a></Link>
-        <Link href="https://github.com/mengiefen"><a target="_blank"><FaGithubSquare className="fa github" /></a></Link>
-        <Link href="https://angel.co/u/mengefen"><a target="_blank"><FaAngellist className="fa angellist" /></a></Link>
-        {/* <Link href=''><a target="_blank"><FaMedium className="fa medium" /></a></Link> */}
-        </div>
-      <p>&#169;Copyright,  2022</p>
+        <NavLink href="https://www.facebook.com/mengistu.fentaw" target="_blank">
+          <FaFacebookSquare className="fa facebook" />
+        </NavLink>
+        <NavLink href="https://twitter.com/MengistuFentaw" target="_blank">
+          <FaTwitterSquare className="fa twitter" />
+        </NavLink>
+
+        <NavLink href="https://www.linkedin.com/in/mengstufentaw/" target="_blank">
+          <FaLinkedin className="fa linkedin" />
+        </NavLink>
+        <NavLink href="https://github.com/mengiefen" _target="blank">
+          <FaGithubSquare className="fa github" />
+        </NavLink>
+        <NavLink href="https://angel.co/u/mengefen" _target="blank">
+          <FaAngellist className="fa angellist" />
+        </NavLink>
+        {/* <NavLink href=''><FaMedium className="fa medium" /></NavLink> */}
+      </div>
+      <p>&#169;Copyright, 2022</p>
     </StyledFooter>
   );
 };
 
 export default Footer;
-
-
-
-

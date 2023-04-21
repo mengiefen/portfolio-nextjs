@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../../public/logo.png';
-import { HiMenu, HiX } from 'react-icons/hi';
-import Header from './header.styled';
-import NavBar from '../Navbar/nav';
+import { useState } from "react";
+import styled from "styled-components";
+import Image from "next/image";
+import logo from "../../public/logo.png";
+import { HiMenu, HiX } from "react-icons/hi";
+import Header from "./header.styled";
+import NavBar from "../Navbar/nav";
+import NavLink from "../Navbar/NavLink";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,17 +18,11 @@ const Navbar = () => {
     <Header>
       {menuOpen && <NavBar handleClick={handleOpenMenu} />}
       <div className="header">
-        <Link href="/">
-          <a>
-            <Image width={50} height={25} alt="logo" src={logo} />
-          </a>
-        </Link>
+        <NavLink href="/">
+          <Image width={50} height={25} alt="logo" src={logo} />
+        </NavLink>
         <Button type="button" onClick={handleOpenMenu}>
-          {menuOpen ? (
-            <HiX className="menu-icon" />
-          ) : (
-            <HiMenu className="menu-icon" />
-          )}
+          {menuOpen ? <HiX className="menu-icon" /> : <HiMenu className="menu-icon" />}
         </Button>
       </div>
     </Header>

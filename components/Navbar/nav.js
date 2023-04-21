@@ -1,4 +1,4 @@
-import Link from "next/link";
+import NavLink from "./NavLink";
 import Nav from "./nav.styled";
 import { motion } from "framer-motion";
 
@@ -29,9 +29,7 @@ const NavBar = ({ handleClick }) => {
             transition={{ ease: "easeInOut", duration: 0.5 }}
             onClick={handleClick}
           >
-            <Link href={`#${list.link}`.toLowerCase()}>
-              <a>{list.link}</a>
-            </Link>
+            <NavLink href={`#${list.link}`.toLowerCase()}>{list.link}</NavLink>
           </motion.li>
         ))}
       </ul>
