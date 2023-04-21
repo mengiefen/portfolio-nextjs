@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   width: 90%;
@@ -28,7 +28,7 @@ const Container = styled(motion.section)`
       font-size: 1.75rem;
       font-weight: 700;
       letter-spacing: 2.5px;
-      font-family: 'Oregano', cursive;
+      font-family: "Oregano", cursive;
     }
 
     .border-bottom {
@@ -66,6 +66,7 @@ const Container = styled(motion.section)`
 
     .contact-image {
       display: block;
+      width: 50%;
       @media (max-width: ${({ theme }) => theme.device.tablet}) {
         display: none;
       }

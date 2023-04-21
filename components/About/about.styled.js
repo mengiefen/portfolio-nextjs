@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   width: 100%;
@@ -9,7 +9,7 @@ const Container = styled(motion.section)`
   align-items: center;
   justify-content: flex-end;
   padding: 3rem auto;
-  background-image: url('img.svg');
+  background-image: url("img.svg");
   background-size: cover;
 
   background: linear-gradient(
@@ -45,16 +45,16 @@ const Container = styled(motion.section)`
   }
 
   figure {
-    background-image: url('./img.svg');
+    background-image: url("./img.svg");
+    width: 40%;
   }
 
   .img {
     flex: 1;
     align-self: center;
     filter: grayscale(0.7);
-    border-radius: 50%;
     transition: filter 0.5s ease-in-out;
-    width: 50%;
+    width: 100%;
     height: auto;
 
     &:hover {
@@ -98,7 +98,7 @@ const Container = styled(motion.section)`
     letter-spacing: 2.5px;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    font-family: 'Oregano', cursive;
+    font-family: "Oregano", cursive;
   }
 
   .border-bottom {

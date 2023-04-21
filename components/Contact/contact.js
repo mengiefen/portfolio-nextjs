@@ -1,25 +1,26 @@
-import Container, { Button } from './contact.styled';
-import { useRef, useState } from 'react';
-import Image from 'next/image';
-import emailjs from '@emailjs/browser';
-import INBOX from '../../public/inbox.svg';
-import ENVELOPE from '../../public/envelope.svg';
-import { motion } from 'framer-motion';
+import Container, { Button } from "./contact.styled";
+import { useRef, useState } from "react";
+import Image from "next/image";
+import emailjs from "@emailjs/browser";
+// import INBOX from "../../public/inbox.svg";
+import INBOX from "../../public/ContactUs.svg";
+import ENVELOPE from "../../public/envelope.svg";
+import { motion } from "framer-motion";
 
-import FlashMessage from '../FlashMessages/FlashMessage';
+import FlashMessage from "../FlashMessages/FlashMessage";
 
 const Contact = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [flash, setFlash] = useState({
-    type: '',
+    type: "",
     show: false,
-    message: 'Your message is successfully sent! I will get back to you soon.',
+    message: "Your message is successfully sent! I will get back to you soon.",
     duration: 10000,
   });
 
@@ -34,25 +35,24 @@ const Contact = () => {
       (result) => {
         setFlash({
           ...flash,
-          type: 'success',
+          type: "success",
           show: true,
-          message:
-            'Your message is succesfully delivered. I will reach out to your ',
+          message: "Your message is succesfully delivered. I will reach out to your ",
         });
         setFormData({
-          name: '',
-          email: '',
-          message: '',
+          name: "",
+          email: "",
+          message: "",
         });
       },
       (error) => {
         setFlash({
           ...flash,
-          type: 'alert',
+          type: "alert",
           show: true,
-          message: 'Your message was not sent.',
+          message: "Your message was not sent.",
         });
-      },
+      }
     );
   };
 
@@ -65,13 +65,7 @@ const Contact = () => {
 
   return (
     <Container id="contact">
-      {flash.show && (
-        <FlashMessage
-          message={flash.message}
-          duration={flash.duration}
-          type={flash.type}
-        />
-      )}
+      {flash.show && <FlashMessage message={flash.message} duration={flash.duration} type={flash.type} />}
       <div className="welcome">
         <h2>Contact me</h2>
         <div className="border-bottom"></div>
@@ -80,12 +74,12 @@ const Contact = () => {
         className="form-holder"
         initial={{ x: -10 }}
         whileInView={{ x: 0 }}
-        transition={{ ease: 'easeOut', duration: 1 }}
+        transition={{ ease: "easeOut", duration: 1 }}
       >
         <form ref={form} onSubmit={handleSubmit}>
           <p>
-            I&apos;m always interested in hearing about new projects, so if
-            you&apos;d like to chat please get in touch.
+            I&apos;m always interested in hearing about new projects, so if you&apos;d like to chat please get
+            in touch.
           </p>
           <ul>
             <li>
@@ -128,10 +122,10 @@ const Contact = () => {
         <motion.div
           initial={{ scale: 0.8, x: 10 }}
           whileInView={{ scale: 0.8, x: 0 }}
-          transition={{ ease: 'easeOut', duration: 1 }}
+          transition={{ ease: "easeOut", duration: 1 }}
           className="contact-image"
         >
-          <Image src={ENVELOPE} width={300} height={300} alt="picture of me" />
+          <Image src={INBOX} alt="picture of me" fill />
         </motion.div>
       </motion.div>
     </Container>

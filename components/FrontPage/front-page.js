@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import { ButtonOutline } from '../Buttons/buttons.styled';
-import Container from './front-page.styled';
-import bgImg from '../../public/picture-1.png';
-import SocialMedia from '../SocialMedia/SocialMedia';
-import Typed from 'react-typed';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-import particlesConfig from '../../data/particlesConfig.json';
-import FlashMessage from '../FlashMessages/FlashMessage';
+import Image from "next/image";
+import { ButtonOutline } from "../Buttons/buttons.styled";
+import Container from "./front-page.styled";
+import bgImg from "../../public/picture-1.png";
+import SocialMedia from "../SocialMedia/SocialMedia";
+import Typed from "react-typed";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particlesConfig from "../../data/particlesConfig.json";
+import FlashMessage from "../FlashMessages/FlashMessage";
 const FrontPage = () => {
   const message =
     "Thanks for visiting my portfolio. I'm a passionate developer looking for new opportunities. Feel free to contact me.";
@@ -19,7 +19,7 @@ const FrontPage = () => {
     <Container id="home">
       <FlashMessage message={message} duration={100000} />
 
-      <div style={{ zIndex: '-1' }}>
+      <div style={{ zIndex: "-1" }}>
         <Particles
           id="tsparticles"
           init={particlesInit}
@@ -40,7 +40,7 @@ const FrontPage = () => {
         </h1>
         <h2 className="sub-heading">
           <Typed
-            strings={['Frontend', 'Backend', 'Fullstack']}
+            strings={["Frontend", "Backend", "Fullstack"]}
             typeSpeed={80}
             backSpeed={80}
             backDelay={1000}
@@ -49,9 +49,8 @@ const FrontPage = () => {
           Developer
         </h2>
         <p className="paragraph">
-          I can help you build a product, feature, or website. Look through some
-          of my work and experience! If you like what you see and have a project
-          you need to be coded, don’t hesitate to contact me.
+          I can help you build a product, feature, or website. Look through some of my work and experience! If
+          you like what you see and have a project you need to be coded, don’t hesitate to contact me.
         </p>
         <ButtonOutline
           href="#contact"
@@ -63,13 +62,7 @@ const FrontPage = () => {
       </aside>
       <figure>
         <span className="overlay"></span>
-        <Image
-          src={bgImg}
-          width={1900}
-          height={1800}
-          alt="picture of me"
-          className="img"
-        />
+        <Image src={bgImg} alt="picture of me" className="img" />
       </figure>
     </Container>
   );

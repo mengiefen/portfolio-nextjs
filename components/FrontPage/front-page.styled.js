@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled(motion.section)`
   display: flex;
@@ -70,8 +70,8 @@ const Container = styled(motion.section)`
     /* font-family: 'Nova Oval', cursive; */
     /* font-family: 'Pacifico', cursive; */
     /* font-family: 'Yatra One', cursive; */
-    font-family: 'Zen Dots', cursive;
-    font-family: 'Oregano', cursive;
+    font-family: "Zen Dots", cursive;
+    font-family: "Oregano", cursive;
 
     @media (max-width: ${({ theme }) => theme.device.laptop}) {
       font-size: min(2.75vw, 1.5rem);
@@ -129,10 +129,10 @@ const Container = styled(motion.section)`
     padding-left: 2rem;
     text-align: center;
     color: ${(props) => props.theme.primary};
-    font-family: 'Bebas Neue', cursive;
-    font-family: 'Edu TAS Beginner', cursive;
-    font-family: 'Zen Dots', cursive;
-    font-family: 'Oregano', cursive;
+    font-family: "Bebas Neue", cursive;
+    font-family: "Edu TAS Beginner", cursive;
+    font-family: "Zen Dots", cursive;
+    font-family: "Oregano", cursive;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
       padding-left: 1rem;
@@ -190,13 +190,15 @@ const Container = styled(motion.section)`
   }
 
   .img {
+    width: 100%;
+    height: auto;
     clip-path: polygon(50% 100%, 100% 70%, 75% 0, 25% 0, 0% 70%);
-    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.5 : 0.2)};
+    opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.5 : 0.2)};
 
     @media (max-width: ${({ theme }) => theme.device.mobileS}) {
       width: 100%;
       height: auto;
-      opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0 : 0.2)};
+      opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0 : 0.2)};
     }
   }
 
@@ -208,11 +210,11 @@ const Container = styled(motion.section)`
     width: 100%;
     height: 100%;
     /* background-color: ${(props) => props.theme.bg}; */
-    opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.3 : 0.9)};
+    opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.3 : 0.9)};
     z-index: 10;
 
     @media (max-width: ${({ theme }) => theme.device.tablet}) {
-      opacity: ${(props) => (props.theme.bg === '#fafafa' ? 0.75 : 0.9)};
+      opacity: ${(props) => (props.theme.bg === "#fafafa" ? 0.75 : 0.9)};
     }
   }
 `;
