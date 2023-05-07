@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -125,7 +125,7 @@ body{
     } 
 }
 
-.switch[data-ison="true"] {
+.switch[data-isOn="true"] {
   justify-content: flex-end;
 }
 
@@ -146,46 +146,46 @@ body{
 `;
 
 export const darkTheme = {
-  primary: '#F4FFFDFF',
-  secondary: '#F9DC5CFF',
-  tertiary: '#ED254EFF',
-  bg: '#001220',
-  bg1: '#001220',
-  gray: '#777',
-  green: '#1FB57B',
-  yellow: '#FAD9A1',
-  red: '#F37878',
+  primary: "#F4FFFDFF",
+  secondary: "#F9DC5CFF",
+  tertiary: "#ED254EFF",
+  bg: "#001220",
+  bg1: "#001220",
+  gray: "#777",
+  green: "#1FB57B",
+  yellow: "#FAD9A1",
+  red: "#F37878",
 
   device: {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px',
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px",
   },
 };
 
 export const lightTheme = {
-  primary: '#2d3142',
-  secondary: '#F36B6B',
-  tertiary: '#5DAE8B',
-  bg: '#fafafa',
-  bg1: '#F0F0F0',
-  gray: '#b0b0b0',
-  green: '#1FB57B',
-  yellow: '#FAD9A1',
-  red: '#F37878',
+  primary: "#2d3142",
+  secondary: "#F36B6B",
+  tertiary: "#5DAE8B",
+  bg: "#fafafa",
+  bg1: "#F0F0F0",
+  gray: "#b0b0b0",
+  green: "#1FB57B",
+  yellow: "#FAD9A1",
+  red: "#F37878",
 
   device: {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px',
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    laptopL: "1440px",
+    desktop: "2560px",
   },
 };
 

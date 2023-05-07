@@ -110,6 +110,7 @@ const Container = styled(motion.section)`
 
   .btn {
     max-width: 200px;
+    height: 54px;
   }
 
   .card-list {

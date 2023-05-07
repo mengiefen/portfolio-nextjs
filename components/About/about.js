@@ -26,20 +26,20 @@ const About = () => {
           <h2 className="title">About Me</h2>
           <div className="border-bottom"></div>
           <p className="general-desc">
-            I&apos;m a Full-stack Developer who enjoys learning new programming languages and frameworks.
-            I&apos;m the kind of person who likes challenging myself and learning from it. I can do
-            full-featured front-end websites using HTML, CSS, JavaScript, React, Ruby, and Ruby on Rails.
-            I&apos;m an electrical engineer who loves working on embedded systems, power electronics & drives.
+            I&apos;m a Full-stack Developer who enjoys learning new programming languages and
+            frameworks. I&apos;m the kind of person who likes challenging myself and learning from
+            it. I can do full-featured front-end websites using HTML, CSS, JavaScript, React, Ruby,
+            and Ruby on Rails. I&apos;m an electrical engineer who loves working on embedded
+            systems, power electronics & drives.
           </p>
 
           <p className="general-desc general-desc-para-2">
-            I&apos;m also an engineering instructor in a local college working for more than 11 years. This
-            experience coupled with my skill in programming gave me an opportunity to adapt to different
-            working environments.
+            I&apos;m also an engineering instructor in a local college working for more than 11
+            years. This experience coupled with my skill in programming gave me an opportunity to
+            adapt to different working environments.
           </p>
           <Button
-            type="underline"
-            text="See my resume"
+            text="Download CV"
             className="btn"
             target="_blank"
             whileTap={{ scale: 0.8 }}
